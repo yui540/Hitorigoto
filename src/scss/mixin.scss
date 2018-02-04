@@ -1,0 +1,11 @@
+@mixin pc-layout {
+  @media (min-width: 751px) {
+    @content;
+  }
+}
+
+@mixin sp-layout {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
