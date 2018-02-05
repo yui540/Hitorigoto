@@ -1,0 +1,111 @@
+/**
+ * icon-point1
+ */
+@keyframes load-view__icon-point1-1 {
+  25% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      ($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point1-2 {
+  0% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      ($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
+    );
+  }
+}
+@keyframes load-view__icon-point1-3 {
+  50% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      ($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+
+/**
+ * icon-point2
+ */
+@keyframes load-view__icon-point2-1 {
+  25% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      -($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point2-2 {
+  0% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      -($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point2-3 {
+  50% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      -($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
+    );
+  }
+}
+
+/**
+ * icon-point3
+ */
+@keyframes load-view__icon-point3-1 {
+  25% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      ($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point3-2 {
+  0% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      ($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point3-3 {
+  50% { transform: translateX(0); }
+  100% {
+    transform: translateX(
+      ($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
+    );
+  }
+}
+
+/**
+ * icon-point4
+ */
+@keyframes load-view__icon-point4-1 {
+  25% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      -($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}
+@keyframes load-view__icon-point4-2 {
+  0% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      -($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
+    );
+  }
+}
+@keyframes load-view__icon-point4-3 {
+  50% { transform: translateY(0); }
+  100% {
+    transform: translateY(
+      -($load-view__icon-size - $load-view__icon-point-size)
+    );
+  }
+}

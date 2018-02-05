@@ -58,6 +58,28 @@ $load-view__icon-size: 220px;
         div:nth-child(2) { bottom: ($load-view__icon-point-size + 5); right: 0; }
         div:nth-child(3) { bottom: 0; right: ($load-view__icon-point-size + 5); }
       }
+      
+      // animation ----------------------------------------------------------------------------
+      .load-icon-points:nth-child(1) {
+        div:nth-child(1) { animation: load-view__icon-point1-1 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point1-2 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point1-3 0.7s ease 0s infinite; }
+      }
+      .load-icon-points:nth-child(2) {
+        div:nth-child(1) { animation: load-view__icon-point2-1 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point2-2 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point2-3 0.7s ease 0s infinite; }
+      }
+      .load-icon-points:nth-child(3) {
+        div:nth-child(1) { animation: load-view__icon-point3-1 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point3-2 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point3-3 0.7s ease 0s infinite; }
+      }
+      .load-icon-points:nth-child(4) {
+        div:nth-child(1) { animation: load-view__icon-point4-1 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point4-2 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point4-3 0.7s ease 0s infinite; }
+      }
     }
   }
 }
