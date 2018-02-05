@@ -1,111 +1,91 @@
-/**
- * icon-point1
- */
+/*** icon-point1 ***/
 @keyframes load-view__icon-point1-1 {
-  25% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      ($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  25%  { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point1-2 {
-  0% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      ($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
-    );
-  }
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))); }
 }
 @keyframes load-view__icon-point1-3 {
-  50% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      ($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size - $load-view__icon-point-size)); }
 }
 
-/**
- * icon-point2
- */
+/*** icon-point2 ***/
 @keyframes load-view__icon-point2-1 {
-  25% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      -($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  25%  { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point2-2 {
-  0% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      -($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point2-3 {
-  50% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      -($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
-    );
-  }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))); }
 }
 
 /**
  * icon-point3
  */
 @keyframes load-view__icon-point3-1 {
-  25% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      ($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  25%  { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point3-2 {
-  0% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      ($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point3-3 {
-  50% { transform: translateX(0); }
-  100% {
-    transform: translateX(
-      ($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
-    );
-  }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))); }
 }
 
 /**
  * icon-point4
  */
 @keyframes load-view__icon-point4-1 {
-  25% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      -($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  25%  { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size - $load-view__icon-point-size)); }
 }
 @keyframes load-view__icon-point4-2 {
-  0% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      -($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))
-    );
-  }
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size - ($load-view__icon-point-size * 3 + 10))); }
 }
 @keyframes load-view__icon-point4-3 {
-  50% { transform: translateY(0); }
-  100% {
-    transform: translateY(
-      -($load-view__icon-size - $load-view__icon-point-size)
-    );
-  }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size - $load-view__icon-point-size)); }
+}
+
+
+/*** icon-block1 ***/
+@keyframes load-view__icon-block1 {
+  0%    { transform: scale(1); background-color: #ccc; }
+  12.5% { transform: scale(0.8); background-color: $theme-yellow; }
+  25%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block2 ***/
+@keyframes load-view__icon-block2 {
+  0%    { transform: scale(1); background-color: #ccc; }
+  25%   { transform: scale(1); background-color: #ccc; }
+  37.5% { transform: scale(0.8); background-color: $theme-green; }
+  50%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block3 ***/
+@keyframes load-view__icon-block3 {
+  0%    { transform: scale(1); background-color: #ccc; }
+  50%   { transform: scale(1); background-color: #ccc; }
+  62.5% { transform: scale(0.8); background-color: $theme-purple; }
+  75%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block4 ***/
+@keyframes load-view__icon-block4 {
+  0%    { transform: scale(1); background-color: #ccc; }
+  75%   { transform: scale(1); background-color: #ccc; }
+  87.5% { transform: scale(0.8); background-color: $theme-red; }
+  100%  { transform: scale(1); background-color: #ccc; }
 }

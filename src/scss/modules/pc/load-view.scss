@@ -1,6 +1,7 @@
 $load-view__bg-color: #eee;
-$load-view__icon-point-size: 16px;
 $load-view__icon-size: 220px; 
+$load-view__icon-point-size: 16px;
+$load-view__icon-block-size: 20px;
 $load-view__frame-size: calc(100% - 60px);
 $load-view__frame-cross-size: 20px;
 $load-view__frame-line-size: calc(100% - 60px);
@@ -126,6 +127,39 @@ $load-view__frame-line-size: calc(100% - 60px);
       margin-left: -($load-view__icon-size / 2);
       width: $load-view__icon-size;
       height: $load-view__icon-size;
+      transform: rotate(-45deg);
+
+      /*** load-icon-blocks ***/
+      .load-icon-blocks {
+        position: absolute;
+        top: 50%; left: 50%;
+        margin-top: -(($load-view__icon-block-size * 2 + 5) / 2);
+        margin-left: -(($load-view__icon-block-size * 2 + 5) / 2);
+        width: ($load-view__icon-block-size * 2 + 5);
+        height: ($load-view__icon-block-size * 2 + 5);
+
+        div {
+          float: left;
+          width: $load-view__icon-block-size;
+          height: $load-view__icon-block-size;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          background-color: #ccc;
+          border-radius: 3px;
+        }
+        div:nth-child(2n) { margin-right: 0; }
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        // animation ---------------------------------------------------------------------------
+        div:nth-child(1) { animation: load-view__icon-block1 3s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-block2 3s ease 0s infinite; } 
+        div:nth-child(3) { animation: load-view__icon-block4 3s ease 0s infinite; }
+        div:nth-child(4) { animation: load-view__icon-block3 3s ease 0s infinite; }
+      }
 
       /*** load-icon-points ***/
       .load-icon-points {
