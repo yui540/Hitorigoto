@@ -172,3 +172,11 @@
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(45deg); }
 }
+
+
+/*** catchcopy-line ***/
+@keyframes load-view_catchcopy-line {
+  0%   { transform: translateX(-100%); width: 100%; }
+  50%  { transform: translateX(0%); width: 100%; }
+  100% { transform: translateX(0%); width: 0%; }
+}

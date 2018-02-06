@@ -664,5 +664,18 @@ $load-view__clover-size: 40px;
         &::after { animation: load-view__windmill4-show 3s ease 3.8s forwards; }
       }
     }
+
+    /**
+     * catchcopy
+     */
+    .catchcopy {
+      animation: fadein 0.35s ease 5.8s forwards;
+      .lines {
+        div:nth-child(1) { &::after{ animation: load-view_catchcopy-line 0.5s ease 6s forwards; } }
+        div:nth-child(2) { &::after{ animation: load-view_catchcopy-line 0.8s ease 6.8s forwards; } }
+        div:nth-child(3) { &::after{ animation: load-view_catchcopy-line 0.5s ease 6.4s forwards; } }
+      }
+      .text { animation: fadein 0.8s ease 7.6s forwards; }
+    }
   }
 }
