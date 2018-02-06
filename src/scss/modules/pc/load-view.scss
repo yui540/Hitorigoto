@@ -15,6 +15,7 @@ $load-view__clover-size: 40px;
     width: 100%; height: 100%;
     min-width: $min-width; min-height: $min-height;
     background-color: $load-view__bg-color;
+    overflow: hidden;
     z-index: 1000;
 
     /**
@@ -421,6 +422,81 @@ $load-view__clover-size: 40px;
         content: "";
         display: block;
         clear: both;
+      }
+    }
+
+    /**
+     * windmill
+     */
+    .windmill {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        position: absolute;
+        &::after,
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+        }
+      }
+      div:nth-child(1),
+      div:nth-child(3) {
+        width: 100%; height: 120px;
+
+        &::before,
+        &::after {
+          width: 100%;
+          background-color: #ccc;
+        }
+        &::before { height: 20px; }
+        &::after  { height: 90px; }
+      }
+      div:nth-child(1) {
+        top: 50%; left: 50%;
+        margin-left: -(($load-view__clover-size * 2 + 10) / 2);
+        margin-top: -((($load-view__clover-size * 2 + 10) / 2) + 130);
+
+        &::before { top: 0; transform: translateX(100%); }
+        &::after  { bottom: 0; transform: translateX(100%); }
+      }
+      div:nth-child(3) {
+        bottom: 50%; right: 50%;
+        margin-right: -(($load-view__clover-size * 2 + 10) / 2);
+        margin-bottom: -((($load-view__clover-size * 2 + 10) / 2) + 130);
+
+        &::before { bottom: 0; transform: translateX(-100%); }
+        &::after  { top: 0; transform: translateX(-100%); }
+      }
+      div:nth-child(2),
+      div:nth-child(4) {
+        width: 120px; height: 100%;
+
+        &::before,
+        &::after {
+          height: 100%;
+          background-color: #777;
+        }
+        &::before { width: 20px; }
+        &::after  { width: 90px; }
+      }
+      div:nth-child(2) {
+        top: 50%; left: 50%;
+        margin-left: ((($load-view__clover-size * 2 + 10) / 2) + 10);
+        margin-top: -(($load-view__clover-size * 2 + 10) / 2);
+
+        &::before { right: 0; transform: translateY(100%); }
+        &::after  { left: 0; transform: translateY(100%); }
+      }
+      div:nth-child(4) {
+        bottom: 50%; right: 50%;
+        margin-right: ((($load-view__clover-size * 2 + 10) / 2) + 10);
+        margin-bottom: -(($load-view__clover-size * 2 + 10) / 2);
+
+        &::before { left: 0; transform: translateY(-100%); }
+        &::after  { right: 0; transform: translateY(-100%); }
       }
     }
   }
