@@ -1,5 +1,6 @@
 $load-view__bg-color: #eee;
 $load-view__icon-size: 220px; 
+$load-view__icon-overray-size: 350px; 
 $load-view__icon-point-size: 16px;
 $load-view__icon-block-size: 20px;
 $load-view__frame-size: calc(100% - 60px);
@@ -292,6 +293,46 @@ $load-view__frame-line-size: calc(100% - 60px);
         div:nth-child(2) { animation: load-view__icon-point4-2 0.7s ease 0s infinite; }
         div:nth-child(3) { animation: load-view__icon-point4-3 0.7s ease 0s infinite; }
       }
+    }
+
+    /**
+     * load-icon-overray
+     */
+    .load-icon-overray {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: $load-view__icon-overray-size;
+      height: $load-view__icon-overray-size;
+      margin-top: -($load-view__icon-overray-size / 2);
+      margin-left: -($load-view__icon-overray-size / 2);
+
+      div {
+        position: absolute;
+        right: 0;
+        width: 100%; height: 10%;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          transform: translateX(100%);
+        }
+        &::after { background-color: #eee; }
+      }
+      div:nth-child(1)  { top: 0;   &::before { background-color: $theme-yellow; } }
+      div:nth-child(2)  { top: 10%; &::before { background-color: $theme-green; } }
+      div:nth-child(3)  { top: 20%; &::before { background-color: $theme-red; } }
+      div:nth-child(4)  { top: 30%; &::before { background-color: $theme-blue; } }
+      div:nth-child(5)  { top: 40%; &::before { background-color: $theme-purple; } }
+      div:nth-child(6)  { top: 50%; &::before { background-color: $theme-yellow; } }
+      div:nth-child(7)  { top: 60%; &::before { background-color: $theme-green; } }
+      div:nth-child(8)  { top: 70%; &::before { background-color: $theme-red; } }
+      div:nth-child(9)  { top: 80%; &::before { background-color: $theme-blue; } }
+      div:nth-child(10) { top: 90%; &::before { background-color: $theme-purple; } }
     }
   }
 
