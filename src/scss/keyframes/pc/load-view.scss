@@ -140,3 +140,35 @@
   0%   { opacity: 0; transform: scale(0.6); border-radius: 50%; }
   100% { opacity: 1; transform: scale(1); border-radius: 3px; }
 }
+
+
+/*** windmill-show ***/
+@keyframes load-view__windmill1-show {
+  0%   { transform: translateX(100%); }
+  30%  { transform: translateX(0%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes load-view__windmill2-show {
+  0%   { transform: translateY(100%); }
+  30%  { transform: translateY(0%); }
+  50%  { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}
+@keyframes load-view__windmill3-show {
+  0%   { transform: translateX(-100%); }
+  30%  { transform: translateX(0%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes load-view__windmill4-show {
+  0%   { transform: translateY(-100%); }
+  30%  { transform: translateY(0%); }
+  50%  { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+/*** windmill-rotate ***/
+@keyframes load-view__windmill-rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(45deg); }
+}

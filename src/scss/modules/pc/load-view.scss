@@ -567,6 +567,7 @@ $load-view__clover-size: 40px;
      * clover
      */
     .clover {
+      animation: load-view__windmill-rotate 0.75s ease 4.6s forwards;
       div:nth-child(1) {
         &::before { animation: load-view__clover-leaf 0.7s ease 2.7s forwards; }
         &::after  { animation: load-view__clover-ring 0.7s ease 2.5s forwards; }
@@ -584,5 +585,28 @@ $load-view__clover-size: 40px;
         &::after  { animation: load-view__clover-ring 0.7s ease 3.1s forwards; }
       } 
     } 
+    
+    /**
+     * windmill
+     */
+    .windmill {
+      animation: load-view__windmill-rotate 0.75s ease 4.6s forwards;
+      div:nth-child(1) {
+        &::before,
+        &::after { animation: load-view__windmill1-show 3s ease 3.8s forwards; }
+      }
+      div:nth-child(2) {
+        &::before,
+        &::after { animation: load-view__windmill2-show 3s ease 3.8s forwards; }
+      }
+      div:nth-child(3) {
+        &::before,
+        &::after { animation: load-view__windmill3-show 3s ease 3.8s forwards; }
+      }
+      div:nth-child(4) {
+        &::before,
+        &::after { animation: load-view__windmill4-show 3s ease 3.8s forwards; }
+      }
+    }
   }
 }
