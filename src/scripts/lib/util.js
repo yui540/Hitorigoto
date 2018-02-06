@@ -1,3 +1,6 @@
+const load_view = document.getElementById('load-view')
+const progress_bar = document.querySelector('.load-progressbar-mainline')
+
 /**
  * 画像のプリロード
  * @param images   : 画像パスの配列
@@ -52,4 +55,19 @@ export const hiddenTimeout = (selector, time) => {
   setTimeout(() => {
     document.querySelector(selector).style.display = 'none'
   }, time)
+}
+
+/**
+ * プログレスバーの更新
+ * @param per : 割合
+ */
+export const updateProgressBar = per => {
+  per *= 100
+  progress_bar.children[0].style.transform = `translateX(${ -(100 - per) }%)`  
+}
+
+export const finLoadView = () => {
+  setTimeout(() => {
+    load_view.setAttribute('data-state', 'fin')
+  }, 800)
 }
