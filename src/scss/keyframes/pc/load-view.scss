@@ -89,3 +89,17 @@
   87.5% { transform: scale(0.8); background-color: $theme-red; }
   100%  { transform: scale(1); background-color: #ccc; }
 }
+
+
+/*** progress-line ***/
+@keyframes load-view__progressbar-line {
+  0%   { transform: translate(-100%); width: 100%; }
+  30%  { transform: translate(0%); width: 100%; }
+  60%  { transform: translate(0%); width: 0; }
+  100% { transform: translate(0%); width: 0; }
+}
+/*** progress-mainline ***/
+@keyframes load-view__progressbar-mainline {
+  0%   { width: 100%; }
+  100% { width: 0%; }
+}

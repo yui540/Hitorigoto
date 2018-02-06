@@ -44,6 +44,20 @@ $load-view__frame-line-size: calc(100% - 60px);
       .load-progressbar-line:nth-child(2) { top: 30px; height: 2px; }
       .load-progressbar-line:nth-child(3) { bottom: 25px; height: 6px; }
       .load-progressbar-line:nth-child(4) { bottom: 10px; height: 3px; }
+      
+      // animation -----------------------------------------------------------------------------
+      .load-progressbar-line:nth-child(1) {
+        &::after { animation: load-view__progressbar-line 1.5s ease 0s infinite; }
+      }
+      .load-progressbar-line:nth-child(2) {
+        &::after { animation: load-view__progressbar-line 3s ease 1.5s infinite; }
+      }
+      .load-progressbar-line:nth-child(3) {
+        &::after { animation: load-view__progressbar-line 5s ease 0.5s infinite; }
+      }
+      .load-progressbar-line:nth-child(4) {
+        &::after { animation: load-view__progressbar-line 2s ease 1s infinite; }
+      }
 
       .load-progressbar-mainline {
         position: absolute;
