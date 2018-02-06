@@ -485,5 +485,27 @@ $load-view__clover-size: 40px;
       div:nth-child(3) { animation: load-view__frame3-show 0.5s ease 0.5s forwards; }
       div:nth-child(4) { animation: load-view__frame4-show 0.5s ease 0.5s forwards; }
     }
+    
+    /**
+     * clover
+     */
+    .clover {
+      div:nth-child(1) {
+        &::before { animation: load-view__clover-leaf 0.7s ease 2.7s forwards; }
+        &::after  { animation: load-view__clover-ring 0.7s ease 2.5s forwards; }
+      } 
+      div:nth-child(2) {
+        &::before { animation: load-view__clover-leaf 0.7s ease 2.9s forwards; }
+        &::after  { animation: load-view__clover-ring 0.7s ease 2.7s forwards; }
+      } 
+      div:nth-child(4) {
+        &::before { animation: load-view__clover-leaf 0.7s ease 3.1s forwards; }
+        &::after  { animation: load-view__clover-ring 0.7s ease 2.9s forwards; }
+      } 
+      div:nth-child(3) {
+        &::before { animation: load-view__clover-leaf 0.7s ease 3.3s forwards; }
+        &::after  { animation: load-view__clover-ring 0.7s ease 3.1s forwards; }
+      } 
+    } 
   }
 }
