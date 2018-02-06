@@ -18,6 +18,16 @@ $load-view__clover-size: 40px;
     overflow: hidden;
     z-index: 1000;
 
+    &:after {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #eee;
+      opacity: 0;
+      content: "";
+      display: block;
+    }
+
     /**
      * load-progressbar
      */
@@ -677,5 +687,7 @@ $load-view__clover-size: 40px;
       }
       .text { animation: fadein 0.8s ease 7.6s forwards; }
     }
+
+    &::after { animation: fadein 0.8s ease 8.6s forwards; }
   }
 }
