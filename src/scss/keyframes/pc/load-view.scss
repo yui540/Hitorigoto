@@ -103,3 +103,9 @@
   0%   { width: calc(100% - 160px); }
   100% { width: 0%; }
 }
+
+/*** icon-overray-show ***/
+@keyframes load-view__icon-overray-show {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
