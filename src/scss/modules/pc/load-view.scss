@@ -409,5 +409,15 @@ $load-view__frame-line-size: calc(100% - 60px);
         &::after  { animation: load-view__icon-overray-show 0.5s ease 1.8s forwards }
       }
     }
+    
+    /**
+     * load-frame-overray
+     */
+    .load-frame-overray {
+      div:nth-child(1) { animation: load-view__frame1-show 0.5s ease 0.5s forwards; }
+      div:nth-child(2) { animation: load-view__frame2-show 0.5s ease 0.5s forwards; }
+      div:nth-child(3) { animation: load-view__frame3-show 0.5s ease 0.5s forwards; }
+      div:nth-child(4) { animation: load-view__frame4-show 0.5s ease 0.5s forwards; }
+    }
   }
 }
