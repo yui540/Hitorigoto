@@ -20,7 +20,7 @@ $load-view__frame-line-size: calc(100% - 60px);
      */
     .load-progressbar {
       position: absolute;
-      top: 50%; left: 80px;
+      top: 50%; right: 80px;
       margin-top: -50px;
       width: calc(100% - 160px); height: 100px;
       
@@ -293,5 +293,12 @@ $load-view__frame-line-size: calc(100% - 60px);
         div:nth-child(3) { animation: load-view__icon-point4-3 0.7s ease 0s infinite; }
       }
     }
+  }
+
+  #load-view[data-state="fin"] {
+    /**
+     * progressbar
+     */
+    .load-progressbar { animation: load-view__progressbar-hidden 0.5s ease 0s forwards; }
   }
 }

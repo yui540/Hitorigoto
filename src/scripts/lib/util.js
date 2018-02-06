@@ -67,5 +67,7 @@ export const updateProgressBar = per => {
 }
 
 export const finLoadView = () => {
-  load_view.setAttribute('data-state', 'fin')  
+  setTimeout(() => {
+    load_view.setAttribute('data-state', 'fin')
+  }, 800)
 }

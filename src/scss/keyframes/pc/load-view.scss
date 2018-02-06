@@ -99,7 +99,7 @@
   100% { transform: translate(0%); width: 0; }
 }
 /*** progress-mainline ***/
-@keyframes load-view__progressbar-mainline {
-  0%   { width: 100%; }
+@keyframes load-view__progressbar-hidden {
+  0%   { width: calc(100% - 160px); }
   100% { width: 0%; }
 }
