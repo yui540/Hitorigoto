@@ -1,19 +1,17 @@
-$load-view__bg-color: #eee;
-$load-view__icon-size: 220px; 
-$load-view__icon-overray-size: 350px; 
-$load-view__icon-point-size: 16px;
-$load-view__icon-block-size: 20px;
-$load-view__frame-size: calc(100% - 60px);
-$load-view__frame-cross-size: 20px;
-$load-view__frame-line-size: calc(100% - 60px);
-$load-view__clover-size: 40px;
+$load-view__icon-size__sp: 100px; 
+$load-view__icon-overray-size__sp: 200px; 
+$load-view__icon-point-size__sp: 10px;
+$load-view__icon-block-size__sp: 16px;
+$load-view__frame-size__sp: calc(100% - 40px);
+$load-view__frame-cross-size__sp: 10px;
+$load-view__frame-line-size__sp: calc(100% - 60px);
+$load-view__clover-size__sp: 40px;
 
-@include pc-layout {
+@include sp-layout {
   #load-view {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    min-width: $min-width; min-height: $min-height;
     background-color: $load-view__bg-color;
     overflow: hidden;
     z-index: 1000;
@@ -33,9 +31,9 @@ $load-view__clover-size: 40px;
      */
     .load-progressbar {
       position: absolute;
-      top: 50%; right: 80px;
+      top: 50%; right: 50px;
       margin-top: -50px;
-      width: calc(100% - 160px); height: 100px;
+      width: calc(100% - 100px); height: 100px;
       
       .load-progressbar-line {
         position: absolute;
@@ -102,17 +100,17 @@ $load-view__clover-size: 40px;
 
       .inner {
         position: absolute;
-        top: 30px; left: 30px;
-        width: calc(100% - 60px);
-        height: calc(100% - 60px);
+        top: 20px; left: 20px;
+        width: $load-view__frame-size__sp;
+        height: $load-view__frame-size__sp;
 
         &::after {
           content: "";
           display: block;
           position: absolute;
-          top: 25px; left: 25px;
-          width: calc(100% - 50px);
-          height: calc(100% - 50px);
+          top: 20px; left: 20px;
+          width: calc(100% - 40px);
+          height: calc(100% - 40px);
           border: dashed 1px #aaa;
         }
       }
@@ -120,8 +118,8 @@ $load-view__clover-size: 40px;
       /*** load-frame-cross ***/
       .load-frame-cross {
         position: absolute;
-        width: $load-view__frame-cross-size;
-        height: $load-view__frame-cross-size;
+        width: $load-view__frame-cross-size__sp;
+        height: $load-view__frame-cross-size__sp;
 
         &::before,
         &::after {
@@ -131,29 +129,29 @@ $load-view__clover-size: 40px;
           background-color: #999;
         }
         &::before {
-          top: 0; left: ($load-view__frame-cross-size / 2 - 0.5);
-          width: 1px; height: $load-view__frame-cross-size;
+          top: 0; left: ($load-view__frame-cross-size__sp / 2 - 0.5);
+          width: 1px; height: $load-view__frame-cross-size__sp;
         }
         &::after {
-          top: ($load-view__frame-cross-size / 2 - 0.5); left: 0;
-          width: $load-view__frame-cross-size; height: 1px;
+          top: ($load-view__frame-cross-size__sp / 2 - 0.5); left: 0;
+          width: $load-view__frame-cross-size__sp; height: 1px;
         }
       }
       .load-frame-cross:nth-child(1) {
-        top: -($load-view__frame-cross-size / 2);
-        left: -($load-view__frame-cross-size / 2);
+        top: -($load-view__frame-cross-size__sp / 2);
+        left: -($load-view__frame-cross-size__sp / 2);
       }
       .load-frame-cross:nth-child(2) {
-        top: -($load-view__frame-cross-size / 2);
-        right: -($load-view__frame-cross-size / 2);
+        top: -($load-view__frame-cross-size__sp / 2);
+        right: -($load-view__frame-cross-size__sp / 2);
       }
       .load-frame-cross:nth-child(3) {
-        bottom: -($load-view__frame-cross-size / 2);
-        left: -($load-view__frame-cross-size / 2);
+        bottom: -($load-view__frame-cross-size__sp / 2);
+        left: -($load-view__frame-cross-size__sp / 2);
       }
       .load-frame-cross:nth-child(4) {
-        bottom: -($load-view__frame-cross-size / 2);
-        right: -($load-view__frame-cross-size / 2);
+        bottom: -($load-view__frame-cross-size__sp / 2);
+        right: -($load-view__frame-cross-size__sp / 2);
       }
 
       /*** load-frame-line ***/
@@ -167,9 +165,9 @@ $load-view__clover-size: 40px;
           background-color: #999;
         }
         div:nth-child(1),
-        div:nth-child(3) { width: $load-view__frame-line-size; height: 1px; }
+        div:nth-child(3) { width: $load-view__frame-line-size__sp; height: 1px; }
         div:nth-child(2),
-        div:nth-child(4) { width: 1px; height: $load-view__frame-line-size; }
+        div:nth-child(4) { width: 1px; height: $load-view__frame-line-size__sp; }
         div:nth-child(1) { top: 0; left: 30px; }
         div:nth-child(2) { top: 30px; left: 0; }
         div:nth-child(3) { bottom: -1px; left: 30px; }
@@ -184,9 +182,9 @@ $load-view__clover-size: 40px;
 
         div { position: absolute; }
         div:nth-child(1),
-        div:nth-child(3) { left: 0; width: 100%; height: 6px; }
+        div:nth-child(3) { left: 0; width: 100%; height: 4px; }
         div:nth-child(2),
-        div:nth-child(4) { top: 0; width: 6px; height: 100%; }
+        div:nth-child(4) { top: 0; width: 4px; height: 100%; }
         div:nth-child(1) { top: 0; background-color: $theme-green; }
         div:nth-child(2) { left: 0; background-color: $theme-yellow; }
         div:nth-child(3) { bottom: 0; background-color: $theme-red; }
@@ -200,10 +198,10 @@ $load-view__clover-size: 40px;
     .load-icon {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($load-view__icon-size / 2);
-      margin-left: -($load-view__icon-size / 2);
-      width: $load-view__icon-size;
-      height: $load-view__icon-size;
+      margin-top: -($load-view__icon-size__sp / 2);
+      margin-left: -($load-view__icon-size__sp / 2);
+      width: $load-view__icon-size__sp;
+      height: $load-view__icon-size__sp;
       transform: rotate(-45deg);
 
       &::before {
@@ -219,15 +217,15 @@ $load-view__clover-size: 40px;
       .load-icon-blocks {
         position: absolute;
         top: 50%; left: 50%;
-        margin-top: -(($load-view__icon-block-size * 2 + 5) / 2);
-        margin-left: -(($load-view__icon-block-size * 2 + 5) / 2);
-        width: ($load-view__icon-block-size * 2 + 5);
-        height: ($load-view__icon-block-size * 2 + 5);
+        margin-top: -(($load-view__icon-block-size__sp * 2 + 5) / 2);
+        margin-left: -(($load-view__icon-block-size__sp * 2 + 5) / 2);
+        width: ($load-view__icon-block-size__sp * 2 + 5);
+        height: ($load-view__icon-block-size__sp * 2 + 5);
 
         div {
           float: left;
-          width: $load-view__icon-block-size;
-          height: $load-view__icon-block-size;
+          width: $load-view__icon-block-size__sp;
+          height: $load-view__icon-block-size__sp;
           margin-right: 5px;
           margin-bottom: 5px;
           background-color: #ccc;
@@ -241,10 +239,10 @@ $load-view__clover-size: 40px;
         }
 
         // animation ---------------------------------------------------------------------------
-        div:nth-child(1) { animation: load-view__icon-block1 3s ease 0s infinite; }
-        div:nth-child(2) { animation: load-view__icon-block2 3s ease 0s infinite; } 
-        div:nth-child(3) { animation: load-view__icon-block4 3s ease 0s infinite; }
-        div:nth-child(4) { animation: load-view__icon-block3 3s ease 0s infinite; }
+        div:nth-child(1) { animation: load-view__icon-block1__sp 3s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-block2__sp 3s ease 0s infinite; } 
+        div:nth-child(3) { animation: load-view__icon-block4__sp 3s ease 0s infinite; }
+        div:nth-child(4) { animation: load-view__icon-block3__sp 3s ease 0s infinite; }
       }
 
       /*** load-icon-points ***/
@@ -255,8 +253,8 @@ $load-view__clover-size: 40px;
 
         div {
           position: absolute;
-          width: $load-view__icon-point-size;
-          height: $load-view__icon-point-size;
+          width: $load-view__icon-point-size__sp;
+          height: $load-view__icon-point-size__sp;
           border-radius: 3px;
         }
         div:nth-child(1) { background-color: $theme-red; }
@@ -265,45 +263,45 @@ $load-view__clover-size: 40px;
       }
       .load-icon-points:nth-child(1) {
         div:nth-child(1) { top: 0; left: 0; }
-        div:nth-child(2) { top: ($load-view__icon-point-size + 5); left: 0; }
-        div:nth-child(3) { top: 0; left: ($load-view__icon-point-size + 5); }
+        div:nth-child(2) { top: ($load-view__icon-point-size__sp + 5); left: 0; }
+        div:nth-child(3) { top: 0; left: ($load-view__icon-point-size__sp + 5); }
       }
       .load-icon-points:nth-child(2) {
         div:nth-child(1) { top: 0; right: 0; }
-        div:nth-child(2) { top: ($load-view__icon-point-size + 5); right: 0; }
-        div:nth-child(3) { top: 0; right: ($load-view__icon-point-size + 5); }
+        div:nth-child(2) { top: ($load-view__icon-point-size__sp + 5); right: 0; }
+        div:nth-child(3) { top: 0; right: ($load-view__icon-point-size__sp + 5); }
       }
       .load-icon-points:nth-child(3) {
         div:nth-child(1) { bottom: 0; left: 0; }
-        div:nth-child(2) { bottom: ($load-view__icon-point-size + 5); left: 0; }
-        div:nth-child(3) { bottom: 0; left: ($load-view__icon-point-size + 5); }
+        div:nth-child(2) { bottom: ($load-view__icon-point-size__sp + 5); left: 0; }
+        div:nth-child(3) { bottom: 0; left: ($load-view__icon-point-size__sp + 5); }
       }
       .load-icon-points:nth-child(4) {
         div:nth-child(1) { bottom: 0; right: 0; }
-        div:nth-child(2) { bottom: ($load-view__icon-point-size + 5); right: 0; }
-        div:nth-child(3) { bottom: 0; right: ($load-view__icon-point-size + 5); }
+        div:nth-child(2) { bottom: ($load-view__icon-point-size__sp + 5); right: 0; }
+        div:nth-child(3) { bottom: 0; right: ($load-view__icon-point-size__sp + 5); }
       }
       
       // animation ----------------------------------------------------------------------------
       .load-icon-points:nth-child(1) {
-        div:nth-child(1) { animation: load-view__icon-point1-1 0.7s ease 0s infinite; }
-        div:nth-child(2) { animation: load-view__icon-point1-2 0.7s ease 0s infinite; }
-        div:nth-child(3) { animation: load-view__icon-point1-3 0.7s ease 0s infinite; }
+        div:nth-child(1) { animation: load-view__icon-point1-1__sp 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point1-2__sp 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point1-3__sp 0.7s ease 0s infinite; }
       }
       .load-icon-points:nth-child(2) {
-        div:nth-child(1) { animation: load-view__icon-point2-1 0.7s ease 0s infinite; }
-        div:nth-child(2) { animation: load-view__icon-point2-2 0.7s ease 0s infinite; }
-        div:nth-child(3) { animation: load-view__icon-point2-3 0.7s ease 0s infinite; }
+        div:nth-child(1) { animation: load-view__icon-point2-1__sp 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point2-2__sp 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point2-3__sp 0.7s ease 0s infinite; }
       }
       .load-icon-points:nth-child(3) {
-        div:nth-child(1) { animation: load-view__icon-point3-1 0.7s ease 0s infinite; }
-        div:nth-child(2) { animation: load-view__icon-point3-2 0.7s ease 0s infinite; }
-        div:nth-child(3) { animation: load-view__icon-point3-3 0.7s ease 0s infinite; }
+        div:nth-child(1) { animation: load-view__icon-point3-1__sp 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point3-2__sp 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point3-3__sp 0.7s ease 0s infinite; }
       }
       .load-icon-points:nth-child(4) {
-        div:nth-child(1) { animation: load-view__icon-point4-1 0.7s ease 0s infinite; }
-        div:nth-child(2) { animation: load-view__icon-point4-2 0.7s ease 0s infinite; }
-        div:nth-child(3) { animation: load-view__icon-point4-3 0.7s ease 0s infinite; }
+        div:nth-child(1) { animation: load-view__icon-point4-1__sp 0.7s ease 0s infinite; }
+        div:nth-child(2) { animation: load-view__icon-point4-2__sp 0.7s ease 0s infinite; }
+        div:nth-child(3) { animation: load-view__icon-point4-3__sp 0.7s ease 0s infinite; }
       }
     }
 
@@ -313,10 +311,10 @@ $load-view__clover-size: 40px;
     .load-icon-overray {
       position: absolute;
       top: 50%; left: 50%;
-      width: $load-view__icon-overray-size;
-      height: $load-view__icon-overray-size;
-      margin-top: -($load-view__icon-overray-size / 2);
-      margin-left: -($load-view__icon-overray-size / 2);
+      width: $load-view__icon-overray-size__sp;
+      height: $load-view__icon-overray-size__sp;
+      margin-top: -($load-view__icon-overray-size__sp / 2);
+      margin-left: -($load-view__icon-overray-size__sp / 2);
 
       div {
         position: absolute;
@@ -376,16 +374,16 @@ $load-view__clover-size: 40px;
     .clover {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -(($load-view__clover-size * 2 + 10) / 2);
-      margin-left: -(($load-view__clover-size * 2 + 10) / 2);
-      width: ($load-view__clover-size * 2 + 10);
-      height: ($load-view__clover-size * 2 + 10);
+      margin-top: -(($load-view__clover-size__sp * 2 + 10) / 2);
+      margin-left: -(($load-view__clover-size__sp * 2 + 10) / 2);
+      width: ($load-view__clover-size__sp * 2 + 10);
+      height: ($load-view__clover-size__sp * 2 + 10);
 
       div {
         position: relative;
         float: left;
-        width: $load-view__clover-size;
-        height: $load-view__clover-size;
+        width: $load-view__clover-size__sp;
+        height: $load-view__clover-size__sp;
         margin-bottom: 10px;
         margin-right: 10px;
 
@@ -466,16 +464,16 @@ $load-view__clover-size: 40px;
       }
       div:nth-child(1) {
         top: 50%; left: 50%;
-        margin-left: -(($load-view__clover-size * 2 + 10) / 2);
-        margin-top: -((($load-view__clover-size * 2 + 10) / 2) + 130);
+        margin-left: -(($load-view__clover-size__sp * 2 + 10) / 2);
+        margin-top: -((($load-view__clover-size__sp * 2 + 10) / 2) + 130);
 
         &::before { top: 0; transform: translateX(100%); }
         &::after  { bottom: 0; transform: translateX(100%); }
       }
       div:nth-child(3) {
         bottom: 50%; right: 50%;
-        margin-right: -(($load-view__clover-size * 2 + 10) / 2);
-        margin-bottom: -((($load-view__clover-size * 2 + 10) / 2) + 130);
+        margin-right: -(($load-view__clover-size__sp * 2 + 10) / 2);
+        margin-bottom: -((($load-view__clover-size__sp * 2 + 10) / 2) + 130);
 
         &::before { bottom: 0; transform: translateX(-100%); }
         &::after  { top: 0; transform: translateX(-100%); }
@@ -494,16 +492,16 @@ $load-view__clover-size: 40px;
       }
       div:nth-child(2) {
         top: 50%; left: 50%;
-        margin-left: ((($load-view__clover-size * 2 + 10) / 2) + 10);
-        margin-top: -(($load-view__clover-size * 2 + 10) / 2);
+        margin-left: ((($load-view__clover-size__sp * 2 + 10) / 2) + 10);
+        margin-top: -(($load-view__clover-size__sp * 2 + 10) / 2);
 
         &::before { right: 0; transform: translateY(100%); }
         &::after  { left: 0; transform: translateY(100%); }
       }
       div:nth-child(4) {
         bottom: 50%; right: 50%;
-        margin-right: ((($load-view__clover-size * 2 + 10) / 2) + 10);
-        margin-bottom: -(($load-view__clover-size * 2 + 10) / 2);
+        margin-right: ((($load-view__clover-size__sp * 2 + 10) / 2) + 10);
+        margin-bottom: -(($load-view__clover-size__sp * 2 + 10) / 2);
 
         &::before { left: 0; transform: translateY(-100%); }
         &::after  { right: 0; transform: translateY(-100%); }
@@ -571,51 +569,51 @@ $load-view__clover-size: 40px;
     /**
      * progressbar
      */
-    .load-progressbar { animation: load-view__progressbar-hidden 0.5s ease 0s forwards; }
+    .load-progressbar { animation: load-view__progressbar-hidden__sp 0.5s ease 0s forwards; }
     
     /**
      * load-icon-overray
      */
     .load-icon-overray {
       div:nth-child(1) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 0.5s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 0.5s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1s forwards }
       }
       div:nth-child(2) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 0.6s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.1s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 0.6s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.1s forwards }
       }
       div:nth-child(3) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 0.7s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.2s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 0.7s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.2s forwards }
       }
       div:nth-child(4) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 0.8s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.2s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 0.8s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.2s forwards }
       }
       div:nth-child(5) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 0.9s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.3s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 0.9s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.3s forwards }
       }
       div:nth-child(6) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 1.0s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.4s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 1.0s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.4s forwards }
       }
       div:nth-child(7) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 1.1s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.5s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 1.1s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.5s forwards }
       }
       div:nth-child(8) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 1.2s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.6s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 1.2s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.6s forwards }
       }
       div:nth-child(9) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 1.3s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.7s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 1.3s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.7s forwards }
       }
       div:nth-child(10) { 
-        &::before { animation: load-view__icon-overray-show 0.5s ease 1.4s forwards }
-        &::after  { animation: load-view__icon-overray-show 0.5s ease 1.8s forwards }
+        &::before { animation: load-view__icon-overray-show__sp 0.5s ease 1.4s forwards }
+        &::after  { animation: load-view__icon-overray-show__sp 0.5s ease 1.8s forwards }
       }
     }
     
@@ -623,32 +621,32 @@ $load-view__clover-size: 40px;
      * load-frame-overray
      */
     .load-frame-overray {
-      div:nth-child(1) { animation: load-view__frame1-show 0.5s ease 0.5s forwards; }
-      div:nth-child(2) { animation: load-view__frame2-show 0.5s ease 0.5s forwards; }
-      div:nth-child(3) { animation: load-view__frame3-show 0.5s ease 0.5s forwards; }
-      div:nth-child(4) { animation: load-view__frame4-show 0.5s ease 0.5s forwards; }
+      div:nth-child(1) { animation: load-view__frame1-show__sp 0.5s ease 0.5s forwards; }
+      div:nth-child(2) { animation: load-view__frame2-show__sp 0.5s ease 0.5s forwards; }
+      div:nth-child(3) { animation: load-view__frame3-show__sp 0.5s ease 0.5s forwards; }
+      div:nth-child(4) { animation: load-view__frame4-show__sp 0.5s ease 0.5s forwards; }
     }
     
     /**
      * clover
      */
     .clover {
-      animation: load-view__windmill-rotate 0.75s ease 4.6s forwards;
+      animation: load-view__windmill-rotate__sp 0.75s ease 4.6s forwards;
       div:nth-child(1) {
-        &::before { animation: load-view__clover-leaf 0.7s ease 2.7s forwards; }
-        &::after  { animation: load-view__clover-ring 0.7s ease 2.5s forwards; }
+        &::before { animation: load-view__clover-leaf__sp 0.7s ease 2.7s forwards; }
+        &::after  { animation: load-view__clover-ring__sp 0.7s ease 2.5s forwards; }
       } 
       div:nth-child(2) {
-        &::before { animation: load-view__clover-leaf 0.7s ease 2.9s forwards; }
-        &::after  { animation: load-view__clover-ring 0.7s ease 2.7s forwards; }
+        &::before { animation: load-view__clover-leaf__sp 0.7s ease 2.9s forwards; }
+        &::after  { animation: load-view__clover-ring__sp 0.7s ease 2.7s forwards; }
       } 
       div:nth-child(4) {
-        &::before { animation: load-view__clover-leaf 0.7s ease 3.1s forwards; }
-        &::after  { animation: load-view__clover-ring 0.7s ease 2.9s forwards; }
+        &::before { animation: load-view__clover-leaf__sp 0.7s ease 3.1s forwards; }
+        &::after  { animation: load-view__clover-ring__sp 0.7s ease 2.9s forwards; }
       } 
       div:nth-child(3) {
-        &::before { animation: load-view__clover-leaf 0.7s ease 3.3s forwards; }
-        &::after  { animation: load-view__clover-ring 0.7s ease 3.1s forwards; }
+        &::before { animation: load-view__clover-leaf__sp 0.7s ease 3.3s forwards; }
+        &::after  { animation: load-view__clover-ring__sp 0.7s ease 3.1s forwards; }
       } 
     } 
     
@@ -656,22 +654,22 @@ $load-view__clover-size: 40px;
      * windmill
      */
     .windmill {
-      animation: load-view__windmill-rotate 0.75s ease 4.6s forwards;
+      animation: load-view__windmill-rotate__sp 0.75s ease 4.6s forwards;
       div:nth-child(1) {
         &::before,
-        &::after { animation: load-view__windmill1-show 3s ease 3.8s forwards; }
+        &::after { animation: load-view__windmill1-show__sp 3s ease 3.8s forwards; }
       }
       div:nth-child(2) {
         &::before,
-        &::after { animation: load-view__windmill2-show 3s ease 3.8s forwards; }
+        &::after { animation: load-view__windmill2-show__sp 3s ease 3.8s forwards; }
       }
       div:nth-child(3) {
         &::before,
-        &::after { animation: load-view__windmill3-show 3s ease 3.8s forwards; }
+        &::after { animation: load-view__windmill3-show__sp 3s ease 3.8s forwards; }
       }
       div:nth-child(4) {
         &::before,
-        &::after { animation: load-view__windmill4-show 3s ease 3.8s forwards; }
+        &::after { animation: load-view__windmill4-show__sp 3s ease 3.8s forwards; }
       }
     }
 
@@ -681,9 +679,9 @@ $load-view__clover-size: 40px;
     .catchcopy {
       animation: fadein 0.35s ease 5.8s forwards;
       .lines {
-        div:nth-child(1) { &::after{ animation: load-view_catchcopy-line 0.5s ease 6s forwards; } }
-        div:nth-child(2) { &::after{ animation: load-view_catchcopy-line 0.8s ease 6.8s forwards; } }
-        div:nth-child(3) { &::after{ animation: load-view_catchcopy-line 0.5s ease 6.4s forwards; } }
+        div:nth-child(1) { &::after{ animation: load-view_catchcopy-line__sp 0.5s ease 6s forwards; } }
+        div:nth-child(2) { &::after{ animation: load-view_catchcopy-line__sp 0.8s ease 6.8s forwards; } }
+        div:nth-child(3) { &::after{ animation: load-view_catchcopy-line__sp 0.5s ease 6.4s forwards; } }
       }
       .text { animation: fadein 0.8s ease 7.6s forwards; }
     }
