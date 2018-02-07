@@ -1,0 +1,182 @@
+/*** icon-point1 ***/
+@keyframes load-view__icon-point1-1__sp {
+  25%  { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point1-2__sp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size__sp - ($load-view__icon-point-size__sp * 3 + 10))); }
+}
+@keyframes load-view__icon-point1-3__sp {
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+
+/*** icon-point2 ***/
+@keyframes load-view__icon-point2-1__sp {
+  25%  { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point2-2__sp {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point2-3__sp {
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(-($load-view__icon-size__sp - ($load-view__icon-point-size__sp * 3 + 10))); }
+}
+
+/**
+ * icon-point3
+ */
+@keyframes load-view__icon-point3-1__sp {
+  25%  { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point3-2__sp {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point3-3__sp {
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(($load-view__icon-size__sp - ($load-view__icon-point-size__sp * 3 + 10))); }
+}
+
+/**
+ * icon-point4
+ */
+@keyframes load-view__icon-point4-1__sp {
+  25%  { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+@keyframes load-view__icon-point4-2__sp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size__sp - ($load-view__icon-point-size__sp * 3 + 10))); }
+}
+@keyframes load-view__icon-point4-3__sp {
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(-($load-view__icon-size__sp - $load-view__icon-point-size__sp)); }
+}
+
+
+/*** icon-block1 ***/
+@keyframes load-view__icon-block1__sp {
+  0%    { transform: scale(1); background-color: #ccc; }
+  12.5% { transform: scale(0.8); background-color: $theme-yellow; }
+  25%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block2 ***/
+@keyframes load-view__icon-block2__sp {
+  0%    { transform: scale(1); background-color: #ccc; }
+  25%   { transform: scale(1); background-color: #ccc; }
+  37.5% { transform: scale(0.8); background-color: $theme-green; }
+  50%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block3 ***/
+@keyframes load-view__icon-block3__sp {
+  0%    { transform: scale(1); background-color: #ccc; }
+  50%   { transform: scale(1); background-color: #ccc; }
+  62.5% { transform: scale(0.8); background-color: $theme-purple; }
+  75%   { transform: scale(1); background-color: #ccc; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+/*** icon-block4 ***/
+@keyframes load-view__icon-block4__sp {
+  0%    { transform: scale(1); background-color: #ccc; }
+  75%   { transform: scale(1); background-color: #ccc; }
+  87.5% { transform: scale(0.8); background-color: $theme-red; }
+  100%  { transform: scale(1); background-color: #ccc; }
+}
+
+
+/*** progress-line ***/
+@keyframes load-view__progressbar-line__sp {
+  0%   { transform: translate(-100%); width: 100%; }
+  30%  { transform: translate(0%); width: 100%; }
+  60%  { transform: translate(0%); width: 0; }
+  100% { transform: translate(0%); width: 0; }
+}
+/*** progress-mainline ***/
+@keyframes load-view__progressbar-hidden__sp {
+  0%   { width: calc(100% - 160px); }
+  100% { width: 0%; }
+}
+
+/*** icon-overray-show ***/
+@keyframes load-view__icon-overray-show__sp {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+/*** frame-overray-show ***/
+@keyframes load-view__frame1-show__sp {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes load-view__frame2-show__sp {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes load-view__frame3-show__sp {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes load-view__frame4-show__sp {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0%); }
+}
+
+
+/*** clover-ring ***/
+@keyframes load-view__clover-ring__sp {
+  0%   { opacity: 0; transform: scale(0.6); border-width: 15px; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.5); border-width: 1px; }
+}
+/*** clover-leaf ***/
+@keyframes load-view__clover-leaf__sp {
+  0%   { opacity: 0; transform: scale(0.6); border-radius: 50%; }
+  100% { opacity: 1; transform: scale(1); border-radius: 3px; }
+}
+
+
+/*** windmill-show ***/
+@keyframes load-view__windmill1-show__sp {
+  0%   { transform: translateX(100%); }
+  30%  { transform: translateX(0%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes load-view__windmill2-show__sp {
+  0%   { transform: translateY(100%); }
+  30%  { transform: translateY(0%); }
+  50%  { transform: translateY(0%); }
+  100% { transform: translateY(100%); }
+}
+@keyframes load-view__windmill3-show__sp {
+  0%   { transform: translateX(-100%); }
+  30%  { transform: translateX(0%); }
+  50%  { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes load-view__windmill4-show__sp {
+  0%   { transform: translateY(-100%); }
+  30%  { transform: translateY(0%); }
+  50%  { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+/*** windmill-rotate ***/
+@keyframes load-view__windmill-rotate__sp {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(45deg); }
+}
+
+
+/*** catchcopy-line ***/
+@keyframes load-view_catchcopy-line__sp {
+  0%   { transform: translateX(-100%); width: 100%; }
+  50%  { transform: translateX(0%); width: 100%; }
+  100% { transform: translateX(0%); width: 0%; }
+}
