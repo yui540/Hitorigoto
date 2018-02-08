@@ -105,4 +105,29 @@
       }
     }
   }
+
+  #eriri-animation[data-state="start"] {
+    /**
+     * bg
+     */
+    .bg {
+      animation: eriri-animation__transform-bg 0.5s ease 0s forwards;
+      .brackets {
+        div:nth-child(1) { animation: eriri-animation__show-bracket1 0.7s ease 0.5s forwards; }
+        div:nth-child(2) { animation: eriri-animation__show-bracket2 0.7s ease 0.5s forwards; }
+        div:nth-child(3) { animation: eriri-animation__show-bracket3 0.7s ease 0.5s forwards; }
+        div:nth-child(4) { animation: eriri-animation__show-bracket4 0.7s ease 0.5s forwards; }
+      }
+      .frames {
+        div:nth-child(1) {
+          &::after { animation: eriri-animation__show-frame1 0.7s ease 1s forwards; } }
+        div:nth-child(2) {
+          &::after { animation: eriri-animation__show-frame2 0.7s ease 1s forwards; } }
+        div:nth-child(3) {
+          &::after { animation: eriri-animation__show-frame3 0.7s ease 1s forwards; } }
+        div:nth-child(4) {
+          &::after { animation: eriri-animation__show-frame4 0.7s ease 1s forwards; } }
+      }
+    }
+  }
 }
