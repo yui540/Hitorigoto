@@ -414,6 +414,8 @@ $eriri-animation__panel-height: 332px;
      * panel
      */
     .panel {
+      &::before { animation: fadein 0.1s ease 4.4s forwards; }
+
       /*** bars ***/
       .bars {
         animation: fadeout 0.1s ease 4.4s forwards;
@@ -425,6 +427,24 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(6) { animation: eriri-animation__panel-bar6 1.5s ease-out 3s forwards; }
         div:nth-child(7) { animation: eriri-animation__panel-bar7 1.5s ease-out 3s forwards; }
         div:nth-child(8) { animation: eriri-animation__panel-bar8 1.5s ease-out 3s forwards; }
+      }
+      
+      /*** palette ***/
+      .palette {
+        div:nth-child(1) {
+          &::after { animation: eriri-animation__palette-show1 0.3s ease 4.7s forwards; } }
+        div:nth-child(2) {
+          &::after { animation: eriri-animation__palette-show2 0.3s ease 5s forwards; } }
+        div:nth-child(3) {
+          &::after { animation: eriri-animation__palette-show3 0.3s ease 5.3s forwards; } }
+        div:nth-child(4) {
+          &::after { animation: eriri-animation__palette-show4 0.3s ease 5.6s forwards; } }
+        div:nth-child(5) {
+          &::after { animation: eriri-animation__palette-show1 0.3s ease 5.9s forwards; } }
+        div:nth-child(6) {
+          &::after { animation: eriri-animation__palette-show2 0.3s ease 6.2s forwards; } }
+        div:nth-child(7) {
+          &::after { animation: eriri-animation__palette-show3 0.3s ease 6.5s forwards; } }
       }
     }
   }
