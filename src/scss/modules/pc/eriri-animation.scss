@@ -463,6 +463,18 @@ $eriri-animation__panel-height: 332px;
     }
     
     /**
+     * attack-effect
+     */
+    .attack-effect-1 {
+      &::before,
+      &::after { animation: eriri-animation__attack-effect 0.4s ease 7s forwards; }
+    }
+    .attack-effect-2 {
+      &::before,
+      &::after { animation: eriri-animation__attack-effect 0.4s ease 7.5s forwards; }
+    }
+    
+    /**
      * controls-btn
      */
     .controls-btn {
