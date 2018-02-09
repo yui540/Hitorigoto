@@ -111,6 +111,39 @@ $eriri-animation__panel-height: 332px;
     }
 
     /**
+     * attack-effect
+     */
+    .attack-effect-1,
+    .attack-effect-2 {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 120px; height: 120px;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      &::before { top: -60px; right: -60px; }
+      &::after  { bottom: -60px; left: -60px; }
+    }
+    .attack-effect-1 {
+      &::before,
+      &::after { background-color: $theme-red; }
+    }
+    .attack-effect-2 {
+      &::before,
+      &::after { background-color: $theme-green; }
+    }
+
+    /**
      * controls-btn
      */
     .controls-btn {
