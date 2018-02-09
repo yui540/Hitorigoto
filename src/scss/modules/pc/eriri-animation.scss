@@ -254,6 +254,17 @@ $eriri-animation__panel-height: 332px;
       width: $eriri-animation__panel-width;
       height: $eriri-animation__panel-height;
 
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: #aaa;
+        opacity: 0;
+      }
+
+      /*** bars ***/
       .bars {
         position: absolute;
         top: 0; left: 0;
@@ -275,6 +286,70 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(6) { top: 62.5%; }
         div:nth-child(7) { top: 75%; }
         div:nth-child(8) { top: 87.5%; }
+      }
+
+      /*** palette ***/
+      .palette {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%; height: 100%;
+          }
+        }
+        div:nth-child(1) {
+          &::after {
+            top: 0; right: 0;
+            transform: translateX(-100%);
+            background-color: #E0CFA9; }
+        }
+        div:nth-child(2) {
+          &::after {
+            bottom: 0; left: 0;
+            transform: translateY(-100%);
+            background-color: #AC7F7D; }
+        }
+        div:nth-child(3) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateX(100%);
+            background-color: #36272E; }
+        }
+        div:nth-child(4) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateY(100%);
+            background-color: #F1EAEE; }
+        }
+        div:nth-child(5) {
+          &::after {
+            top: 0; right: 0;
+            transform: translateX(-100%);
+            background-color: #97899F; }
+        }
+        div:nth-child(6) {
+          &::after {
+            bottom: 0; left: 0;
+            transform: translateY(-100%);
+            background-color: #F9EDE8; }
+        }
+        div:nth-child(7) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateX(100%);
+            background-color: #C7E5E8; }
+        }
       }
     }
   }
@@ -339,6 +414,7 @@ $eriri-animation__panel-height: 332px;
      * panel
      */
     .panel {
+      /*** bars ***/
       .bars {
         animation: fadeout 0.1s ease 4.4s forwards;
         div:nth-child(1) { animation: eriri-animation__panel-bar1 1.5s ease-out 3s forwards; }
