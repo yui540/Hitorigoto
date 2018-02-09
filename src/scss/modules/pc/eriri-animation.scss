@@ -144,6 +144,47 @@ $eriri-animation__panel-height: 332px;
     }
 
     /**
+     * bg-eriri
+     */
+    .bg-eriri {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      .face {
+        position: absolute;
+        top: -100px; left: 50%;
+        margin-left: -118.5px;
+        width: 237px; height: 200px;
+        background-image: url(../images/eriri-animation/bg-eriri/face.png);
+        background-size: 100%;
+        opacity: 0;
+      }
+
+      .arm {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 11;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -30px; left: 300px;
+          width: 70px; height: 70px;
+          background-size: 100%;
+          background-position: center;
+          background-image: url(../images/eriri-animation/bg-eriri/arm-2.png);
+          opacity: 0;
+        }
+      }
+    }
+
+    /**
      * controls-btn
      */
     .controls-btn {
