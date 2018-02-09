@@ -486,6 +486,42 @@ $eriri-animation__panel-height: 332px;
         }
       }
     }
+
+
+    /**
+     * curtain
+     */
+    .curtain {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 20;
+      overflow: hidden;
+      
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 50%; height: 100%;
+        }
+        &::before { transform: translateX(-100%); border-bottom-right-radius: 50%; left: 0; }
+        &::after  { transform: translateX(100%); border-bottom-left-radius: 50%; right: 0; }
+      }
+      div:nth-child(1) {
+        &::before,
+        &::after { background-color: #8FC08B; }
+      }
+      div:nth-child(2) {
+        &::before,
+        &::after { background-color: #5C9056; }
+      }
+    }
   }
 
   #eriri-animation[data-state="start"] {
