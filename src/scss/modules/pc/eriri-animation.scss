@@ -595,6 +595,7 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(6) { animation: fadein 0.1s ease 6.35s forwards; }
         div:nth-child(7) { animation: fadein 0.1s ease 6.65s forwards; }
         .frame { animation: eriri-animation__illsut-frame 1s ease 7s forwards; }
+        .hacked { animation: eriri-animation__show-hacked 0.7s ease 8s forwards; }
       }
 
       /*** palette ***/
