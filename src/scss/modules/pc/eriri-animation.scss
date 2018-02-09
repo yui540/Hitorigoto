@@ -334,5 +334,22 @@ $eriri-animation__panel-height: 332px;
         &::after { animation: fadein 0.2s ease 2.8s forwards; }
       }
     }
+    
+    /**
+     * panel
+     */
+    .panel {
+      .bars {
+        animation: fadeout 0.1s ease 4.4s forwards;
+        div:nth-child(1) { animation: eriri-animation__panel-bar1 1.5s ease-out 3s forwards; }
+        div:nth-child(2) { animation: eriri-animation__panel-bar2 1.5s ease-out 3s forwards; }
+        div:nth-child(3) { animation: eriri-animation__panel-bar3 1.5s ease-out 3s forwards; }
+        div:nth-child(4) { animation: eriri-animation__panel-bar4 1.5s ease-out 3s forwards; }
+        div:nth-child(5) { animation: eriri-animation__panel-bar5 1.5s ease-out 3s forwards; }
+        div:nth-child(6) { animation: eriri-animation__panel-bar6 1.5s ease-out 3s forwards; }
+        div:nth-child(7) { animation: eriri-animation__panel-bar7 1.5s ease-out 3s forwards; }
+        div:nth-child(8) { animation: eriri-animation__panel-bar8 1.5s ease-out 3s forwards; }
+      }
+    }
   }
 }

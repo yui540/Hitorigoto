@@ -104,3 +104,53 @@
   70%  { transform: translateY(-($eriri-animation__sd-eriri-size - 60px)) rotate(15deg); }
   100% { transform: translateY(-($eriri-animation__sd-eriri-size - 80px)) rotate(25deg); }
 }
+
+/*** panel-bar ***/
+@keyframes eriri-animation__panel-bar1 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-90px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-100px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar2 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(90px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(100px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar3 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-140px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-160px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar4 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(140px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(160px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar5 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-60px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-75px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar6 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(60px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(75px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar7 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-110px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-135px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar8 {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(110px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(135px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
