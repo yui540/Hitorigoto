@@ -176,3 +176,22 @@
   50%  { transform: translateY(0%); height: 100%; }
   100% { transform: translateY(0%); height: 0%; }
 }
+
+
+/*** illust-attack ***/
+@keyframes eriri-animation__illsut-attack {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  50%  { transform: scale(1); }
+  75%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/*** illust-frame ***/
+@keyframes eriri-animation__illsut-frame {
+  0%   { border-width: 0; }
+  25%  { border-width: 5px; }
+  50%  { border-width: 5px; }
+  75%  { border-width: 10px; }
+  100% { border-width: 10px; }
+}
