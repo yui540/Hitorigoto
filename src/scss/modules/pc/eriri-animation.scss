@@ -1,5 +1,7 @@
 $eriri-animation__controls-btn-size: 100px;
 $eriri-animation__sd-eriri-size: 150px;
+$eriri-animation__panel-width: 600px;
+$eriri-animation__panel-height: 332px;
 
 @include pc-layout {
   #eriri-animation {
@@ -238,6 +240,41 @@ $eriri-animation__sd-eriri-size: 150px;
         }
         &::before { background-image: url(../images/eriri-animation/sd-eriri.png); }
         &::after  { background-image: url(../images/eriri-animation/sd-eriri_.png); opacity: 0; }
+      }
+    }
+    
+    /**
+     * panel
+     */
+    .panel {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      .bars {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        div {
+          position: absolute;
+          width: 30%; height: 12.5%;
+          background-color: #aaa;
+          opacity: 0;
+        }
+        div:nth-child(2n - 1) { left: 0; }
+        div:nth-child(2n) { right: 0; }
+        div:nth-child(1) { top: 0; }
+        div:nth-child(2) { top: 12.5%; }
+        div:nth-child(3) { top: 25%; }
+        div:nth-child(4) { top: 37.5%; }
+        div:nth-child(5) { top: 50%; }
+        div:nth-child(6) { top: 62.5%; }
+        div:nth-child(7) { top: 75%; }
+        div:nth-child(8) { top: 87.5%; }
       }
     }
   }
