@@ -203,3 +203,21 @@
   50%  { opacity: 1; }
   100% { opacity: 0; transform: scale(1.4); }
 }
+
+/*** panel-down ***/
+@keyframes eriri-animation__panel-down {
+  0%   { margin-top: -($eriri-animation__panel-height / 2); }
+  100% { margin-top: -($eriri-animation__panel-height / 2 - 100px); }
+}
+
+/*** bg-eriri-arm ***/
+@keyframes eriri-animation__bg-eriri-arm {
+  0%   { top: -30px; opacity: 0; }
+  100% { top: 70px; opacity: 1; }
+}
+
+/*** bg-eriri-face ***/
+@keyframes eriri-animation__bg-eriri-face {
+  0%   { top: 0; opacity: 0; }
+  100% { top: -100px; opacity: 1; }
+}

@@ -516,6 +516,14 @@ $eriri-animation__panel-height: 332px;
     }
     
     /**
+     * bg-eriri
+     */
+    .bg-eriri {
+      .arm  { &::after { animation: eriri-animation__bg-eriri-arm 0.7s ease 8s forwards; } }
+      .face { animation: eriri-animation__bg-eriri-face 0.7s ease 8s forwards; }
+    }
+    
+    /**
      * controls-btn
      */
     .controls-btn {
@@ -551,6 +559,7 @@ $eriri-animation__panel-height: 332px;
      * panel
      */
     .panel {
+      animation: eriri-animation__panel-down 0.7s ease 8s forwards;
       &::before { animation: fadein 0.1s ease 4.4s forwards; }
 
       /*** bars ***/
