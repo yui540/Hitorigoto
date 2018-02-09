@@ -288,12 +288,63 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(8) { top: 87.5%; }
       }
 
+      /*** illust ***/
+      .illust {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+        z-index: 0;
+
+        .inner,
+        .frame {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+        }
+
+        .frame {
+          box-sizing: border-box;
+          border: solid 0px #fff;
+          z-index: 9;
+        }
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-size: 100%;
+          opacity: 0;
+        }
+        div:nth-child(1) {
+          z-index: 6;
+          background-image: url(../images/eriri-animation/large-eriri/1.png); }
+        div:nth-child(2) {
+          z-index: 7;
+          background-image: url(../images/eriri-animation/large-eriri/2.png); }
+        div:nth-child(3) {
+          z-index: 3;
+          background-image: url(../images/eriri-animation/large-eriri/3.png); }
+        div:nth-child(4) {
+          z-index: 2;
+          background-image: url(../images/eriri-animation/large-eriri/4.png); }
+        div:nth-child(5) {
+          background-image: url(../images/eriri-animation/large-eriri/5.png); }
+        div:nth-child(6) {
+          z-index: 1;
+          background-image: url(../images/eriri-animation/large-eriri/6.png); }
+        div:nth-child(7) {
+          z-index: 4;
+          background-image: url(../images/eriri-animation/large-eriri/7.png); }
+      }
+
       /*** palette ***/
       .palette {
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
         overflow: hidden;
+        z-index: 10;
 
         div {
           position: absolute;
@@ -428,7 +479,7 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(7) { animation: eriri-animation__panel-bar7 1.5s ease-out 3s forwards; }
         div:nth-child(8) { animation: eriri-animation__panel-bar8 1.5s ease-out 3s forwards; }
       }
-      
+
       /*** palette ***/
       .palette {
         div:nth-child(1) {
