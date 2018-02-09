@@ -249,5 +249,19 @@ $eriri-animation__sd-eriri-size: 150px;
       .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
       .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }
     }
+    
+    /**
+     * sd-eriri
+     */
+    .sd-eriri {
+      animation: eriri-animation__sd-eriri-fail 0.5s ease-out 2.7s forwards;
+      .inner { animation: eriri-animation__sd-eriri-hidden 0.5s ease 3.3s forwards; }
+      .ring   { animation: eriri-animation__sd-eriri-ring 0.5s ease 2s forwards; }
+      .circle { animation: eriri-animation__sd-eriri-circle 0.5s ease 2.1s forwards; }
+      .illust {
+        animation: eriri-animation__sd-eriri 0.5s ease-out 2.2s forwards;
+        &::after { animation: fadein 0.2s ease 2.8s forwards; }
+      }
+    }
   }
 }
