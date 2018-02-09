@@ -270,6 +270,7 @@ $eriri-animation__sd-eriri-size: 150px;
      * controls-btn
      */
     .controls-btn {
+      animation: eriri-animation__controls-btn-hidden 0.4s ease 4.2s forwards;
       .ring     { animation: eriri-animation__show-ring 0.35s ease 1.5s forwards; }
       .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
       .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }

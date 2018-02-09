@@ -60,6 +60,12 @@
   100% { transform: scale(1.5); opacity: 0; }
 }
 
+/*** controls-btn-hidden ***/
+@keyframes eriri-animation__controls-btn-hidden {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.2); }
+}
+
 
 /*** sd-eriri-ring ***/
 @keyframes eriri-animation__sd-eriri-ring {
