@@ -652,5 +652,19 @@ $eriri-animation__panel-height: 332px;
           &::after { animation: eriri-animation__palette-show3 0.3s ease 6.5s forwards; } }
       }
     }
+    
+    /**
+     * curtain
+     */
+    .curtain {
+      div:nth-child(1) {
+        &::before { animation: eriri-animation__curtain1 0.7s ease 8.7s forwards; }
+        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.7s forwards; }
+      }
+      div:nth-child(2) {
+        &::before { animation: eriri-animation__curtain1 0.7s ease 8.8s forwards; }
+        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.8s forwards; }
+      }
+    }
   }
 }

@@ -227,3 +227,14 @@
   0%   { opacity: 0; transform: scale(0.6); }
   100% { opacity: 1; transform: scale(1); }
 }
+
+
+/*** curtain ***/
+@keyframes eriri-animation__curtain1 {
+  0%   { transform: translateX(-100%); border-bottom-right-radius: 50%; }
+  100% { transform: translateX(0%); border-bottom-right-radius: 0%; }
+}
+@keyframes eriri-animation__curtain2 {
+  0%   { transform: translateX(100%); border-bottom-left-radius: 50%; }
+  100% { transform: translateX(0%); border-bottom-left-radius: 0%; }
+}
