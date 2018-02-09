@@ -185,5 +185,14 @@ $eriri-animation__controls-btn-size: 100px;
           &::after { animation: eriri-animation__show-frame4 0.7s ease 1s forwards; } }
       }
     }
+    
+    /**
+     * controls-btn
+     */
+    .controls-btn {
+      .ring     { animation: eriri-animation__show-ring 0.35s ease 1.5s forwards; }
+      .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
+      .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }
+    }
   }
 }
