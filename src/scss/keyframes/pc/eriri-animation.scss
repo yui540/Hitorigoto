@@ -53,6 +53,14 @@
 }
 
 
+/*** collision-effect ***/
+@keyframes eriri-animation__collision-effect {
+  0%   { transform: scale(0.6); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+
 /*** sd-eriri-ring ***/
 @keyframes eriri-animation__sd-eriri-ring {
   0%   { border-width: 50px; transform: scale(0.8); opacity: 0; }

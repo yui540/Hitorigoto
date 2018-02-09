@@ -274,7 +274,15 @@ $eriri-animation__sd-eriri-size: 150px;
       .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
       .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }
     }
-    
+ 
+    /**
+     * collision-effect
+     */
+    .collision-effect {
+      &::before { animation: eriri-animation__collision-effect 0.4s ease 2.8s forwards; }
+      &::after  { animation: eriri-animation__collision-effect 0.4s ease 3.05s forwards; }
+    }
+
     /**
      * sd-eriri
      */
