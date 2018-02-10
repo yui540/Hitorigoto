@@ -1,0 +1,240 @@
+/*** transform-bg ***/
+@keyframes eriri-animation__transform-bg__sp {
+  0%   { width: 100%; height: 100%; top: 0; left: 0; }
+  100% { width: calc(100% - 20px); height: calc(100% - 20px); top: 10px; left: 10px; }
+}
+
+/*** show-bracket ***/
+@keyframes eriri-animation__show-bracket1__sp {
+  0%   { opacity: 0; transform: translate(-10px, -10px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes eriri-animation__show-bracket2__sp {
+  0%   { opacity: 0; transform: translate(10px, -10px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes eriri-animation__show-bracket3__sp {
+  0%   { opacity: 0; transform: translate(-10px, 10px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes eriri-animation__show-bracket4__sp {
+  0%   { opacity: 0; transform: translate(10px, 10px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+/*** show-frame ***/
+@keyframes eriri-animation__show-frame1__sp {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes eriri-animation__show-frame3__sp {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes eriri-animation__show-frame2__sp {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes eriri-animation__show-frame4__sp {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
+}
+
+/*** show-ring ***/
+@keyframes eriri-animation__show-ring__sp {
+  0%   { transform: scale(0.8); border-width: 25px; opacity: 0; }
+  100% { transform: scale(1); border-width: 1px; opacity: 1; }
+}
+
+/*** show-btn ***/
+@keyframes eriri-animation__show-btn__sp {
+  0%   { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+/*** collision-effect ***/
+@keyframes eriri-animation__collision-effect__sp {
+  0%   { transform: scale(0.6); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/*** controls-btn-hidden ***/
+@keyframes eriri-animation__controls-btn-hidden__sp {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.2); }
+}
+
+
+/*** sd-eriri-ring ***/
+@keyframes eriri-animation__sd-eriri-ring__sp {
+  0%   { border-width: 50px; transform: scale(0.8); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { border-width: 0px; transform: scale(1.3); opacity: 0; }
+}
+
+/*** sd-eriri-circle ***/
+@keyframes eriri-animation__sd-eriri-circle__sp {
+  0%   { transform: scale(0.5); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0; }
+}
+
+/*** sd-eriri ***/
+@keyframes eriri-animation__sd-eriri__sp {
+  0%   { opacity: 0; transform: scale(0.3); }
+  60%  { transform: scale(1.05); }
+  80%  { transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/*** sd-eriri-hidden ***/
+@keyframes eriri-animation__sd-eriri-hidden__sp {
+  0%   { opacity: 1; }
+  40%  { opacity: 0; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*** sd-eriri-fail ***/
+@keyframes eriri-animation__sd-eriri-fail__sp {
+  0%   { transform: translateY(-($eriri-animation__sd-eriri-size__sp + 50px)) rotate(0deg); }
+  40%  { transform: translateY(-($eriri-animation__sd-eriri-size__sp - 40px)) rotate(25deg); }
+  70%  { transform: translateY(-($eriri-animation__sd-eriri-size__sp - 30px)) rotate(15deg); }
+  100% { transform: translateY(-($eriri-animation__sd-eriri-size__sp - 40px)) rotate(25deg); }
+}
+
+/*** panel-bar ***/
+@keyframes eriri-animation__panel-bar1__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-40px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-50px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar2__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(40px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(50px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar3__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-80px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-90px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar4__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(80px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(90px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar5__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-30px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-45px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar6__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(30px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(45px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar7__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(-75px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(-85px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+@keyframes eriri-animation__panel-bar8__sp {
+  0%   { transform: translateX(0px); opacity: 0; width: 30%; }
+  20%  { transform: translateX(75px); opacity: 1; width: 30%; }
+  90%  { transform: translateX(85px); opacity: 1; width: 30%; }
+  100% { transform: translateX(0px); opacity: 1; width: 100%; }
+}
+
+/*** palette-show ***/
+@keyframes eriri-animation__palette-show1__sp {
+  0%   { transform: translateX(-100%); width: 100%; }
+  50%  { transform: translateX(0%); width: 100%; }
+  100% { transform: translateX(0%); width: 0%; }
+}
+@keyframes eriri-animation__palette-show2__sp {
+  0%   { transform: translateY(-100%); height: 100%; }
+  50%  { transform: translateY(0%); height: 100%; }
+  100% { transform: translateY(0%); height: 0%; }
+}
+@keyframes eriri-animation__palette-show3__sp {
+  0%   { transform: translateX(100%); width: 100%; }
+  50%  { transform: translateX(0%); width: 100%; }
+  100% { transform: translateX(0%); width: 0%; }
+}
+@keyframes eriri-animation__palette-show4__sp {
+  0%   { transform: translateY(100%); height: 100%; }
+  50%  { transform: translateY(0%); height: 100%; }
+  100% { transform: translateY(0%); height: 0%; }
+}
+
+
+/*** illust-attack ***/
+@keyframes eriri-animation__illsut-attack__sp {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.1); }
+  50%  { transform: scale(1); }
+  75%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/*** illust-frame ***/
+@keyframes eriri-animation__illsut-frame__sp {
+  0%   { border-width: 0; }
+  25%  { border-width: 5px; }
+  50%  { border-width: 5px; }
+  75%  { border-width: 10px; }
+  100% { border-width: 10px; }
+}
+
+
+/*** attack-effect ***/
+@keyframes eriri-animation__attack-effect__sp {
+  0%   { opacity: 0; transform: scale(0.8); }
+  50%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+
+/*** panel-down ***/
+@keyframes eriri-animation__panel-down__sp {
+  0%   { margin-top: -($eriri-animation__panel-height__sp / 2); }
+  100% { margin-top: -($eriri-animation__panel-height__sp / 2 - 75px); }
+}
+
+/*** bg-eriri-arm ***/
+@keyframes eriri-animation__bg-eriri-arm__sp {
+  0%   { top: -16px; opacity: 0; }
+  100% { top: 59px; opacity: 1; }
+}
+
+/*** bg-eriri-face ***/
+@keyframes eriri-animation__bg-eriri-face__sp {
+  0%   { top: 0; opacity: 0; }
+  100% { top: -75px; opacity: 1; }
+}
+
+/*** show-hacked ***/
+@keyframes eriri-animation__show-hacked__sp {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+
+/*** curtain ***/
+@keyframes eriri-animation__curtain1__sp {
+  0%   { transform: translateX(-100%); border-bottom-right-radius: 50%; }
+  100% { transform: translateX(0%); border-bottom-right-radius: 0%; }
+}
+@keyframes eriri-animation__curtain2__sp {
+  0%   { transform: translateX(100%); border-bottom-left-radius: 50%; }
+  100% { transform: translateX(0%); border-bottom-left-radius: 0%; }
+}
