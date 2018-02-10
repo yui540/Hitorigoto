@@ -1,0 +1,678 @@
+$eriri-animation__controls-btn-size: 100px;
+$eriri-animation__sd-eriri-size: 150px;
+$eriri-animation__panel-width: 600px;
+$eriri-animation__panel-height: 332px;
+
+@include pc-layout {
+  #eriri-animation {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    min-width: $min-width; min-height: $min-height;
+    background-color: #888;
+    z-index: 999;
+    
+    /**
+     * bg
+     */
+    .bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+      box-shadow: 0 0 40px #4c4c4c;
+
+      /*** brackets ***/
+      .brackets {
+        div {
+          position: absolute;
+          width: 20px; height: 20px;
+          opacity: 0;
+
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            background-color: #888;
+            position: absolute;
+          }
+          &::before { width: 100%; height: 5px; }
+          &::after  { width: 5px; height: 100%; }
+        }
+        div:nth-child(1) {
+          top: 20px; left: 20px;
+          transform: translate(-10px, -10px);
+          &::before,
+          &::after { top: 0; left: 0; }
+        }
+        div:nth-child(2) {
+          transform: translate(10px, -10px);
+          top: 20px; right: 20px;
+          &::before,
+          &::after { top: 0; right: 0; }
+        }
+        div:nth-child(3) {
+          transform: translate(-10px, 10px);
+          bottom: 20px; left: 20px;
+          &::before,
+          &::after { bottom: 0; left: 0; }
+        }
+        div:nth-child(4) {
+          bottom: 20px; right: 20px;
+          transform: translate(10px, 10px);
+          &::before,
+          &::after { bottom: 0; right: 0; }
+        }
+      }
+
+      /*** frames ***/
+      .frames {
+        div {
+          position: absolute;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: #aaa;
+          }
+        }
+        div:nth-child(1),
+        div:nth-child(3) {
+          width: calc(100% - 120px); height: 1px;
+          left: 60px;
+        }
+        div:nth-child(2),
+        div:nth-child(4) {
+          height: calc(100% - 120px); width: 1px;
+          top: 60px;
+        }
+        div:nth-child(1) {
+          top: 20px;
+          &::after { transform: translateX(-100%); }
+        }
+        div:nth-child(3) {
+          &::after { transform: translateX(100%); }
+          bottom: 20px;
+        }
+        div:nth-child(2) {
+          &::after { transform: translateY(100%); }
+          left: 20px;
+        }
+        div:nth-child(4) {
+          &::after { transform: translateY(-100%); }
+          right: 20px;
+        }
+      }
+    }
+
+    /**
+     * attack-effect
+     */
+    .attack-effect-1,
+    .attack-effect-2 {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 120px; height: 120px;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      &::before { top: -60px; right: -60px; }
+      &::after  { bottom: -60px; left: -60px; }
+    }
+    .attack-effect-1 {
+      &::before,
+      &::after { background-color: $theme-red; }
+    }
+    .attack-effect-2 {
+      &::before,
+      &::after { background-color: $theme-green; }
+    }
+
+    /**
+     * bg-eriri
+     */
+    .bg-eriri {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      .face {
+        position: absolute;
+        top: -100px; left: 50%;
+        margin-left: -118.5px;
+        width: 237px; height: 200px;
+        background-image: url(../images/eriri-animation/bg-eriri/face.png);
+        background-size: 100%;
+        opacity: 0;
+      }
+
+      .arm {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 12;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -30px; left: 300px;
+          width: 70px; height: 70px;
+          background-size: 100%;
+          background-position: center;
+          background-image: url(../images/eriri-animation/bg-eriri/arm-2.png);
+          opacity: 0;
+        }
+      }
+    }
+
+    /**
+     * controls-btn
+     */
+    .controls-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__controls-btn-size / 2);
+      margin-left: -($eriri-animation__controls-btn-size / 2);
+      width: $eriri-animation__controls-btn-size;
+      height: $eriri-animation__controls-btn-size;
+
+      .ring {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border: solid 25px #666;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      .play-btn {
+        position: absolute;
+        top: 20px; left: 35px;
+        width: 0; height: 0;
+        border-top: solid 30px transparent;
+        border-left: solid 40px #666;
+        border-bottom: solid 30px transparent;
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      .stop-btn {
+        position: absolute;
+        top: 20px; left: 20px;
+        width: 60px; height: 60px;
+        background-color: #eee;
+        opacity: 0;
+        
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 5px;
+          width: 18px; height: 50px;
+          background-color: #666;
+        }
+        &::before { left: 5px; }
+        &::after  { right: 5px; }
+      }
+    }
+    
+    /**
+     * collision-effect
+     */
+    .collision-effect {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-left: -60px;
+      margin-top: -70px;
+      width: 80px; height: 80px;
+      
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        background-color: rgba(0,150,255, 0.3);
+        transform: scale(0.6);
+        opacity: 0;
+      }
+    }
+
+    /**
+     * sd-eriri
+     */
+    .sd-eriri {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__sd-eriri-size / 2);
+      margin-left: -($eriri-animation__sd-eriri-size / 2);
+      width: $eriri-animation__sd-eriri-size;
+      height: $eriri-animation__sd-eriri-size;
+      transform: translateY(-($eriri-animation__sd-eriri-size + 50px));
+
+      .circle,
+      .ring,
+      .illust {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+
+      .circle {
+        background-color: #ccc;
+        border-radius: 50%;
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      .ring {
+        border-radius: 50%;
+        border: solid 50px #999;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      .illust {
+        transform: scale(0.6);
+        opacity: 0;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-size: 90%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        &::before { background-image: url(../images/eriri-animation/sd-eriri.png); }
+        &::after  { background-image: url(../images/eriri-animation/sd-eriri_.png); opacity: 0; }
+      }
+    }
+    
+    /**
+     * panel
+     */
+    .panel {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-top: -($eriri-animation__panel-height / 2);
+      margin-left: -($eriri-animation__panel-width / 2);
+      width: $eriri-animation__panel-width;
+      height: $eriri-animation__panel-height;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: #aaa;
+        opacity: 0;
+      }
+
+      /*** bars ***/
+      .bars {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        div {
+          position: absolute;
+          width: 30%; height: 12.5%;
+          background-color: #aaa;
+          opacity: 0;
+        }
+        div:nth-child(2n - 1) { left: 0; }
+        div:nth-child(2n) { right: 0; }
+        div:nth-child(1) { top: 0; }
+        div:nth-child(2) { top: 12.5%; }
+        div:nth-child(3) { top: 25%; }
+        div:nth-child(4) { top: 37.5%; }
+        div:nth-child(5) { top: 50%; }
+        div:nth-child(6) { top: 62.5%; }
+        div:nth-child(7) { top: 75%; }
+        div:nth-child(8) { top: 87.5%; }
+      }
+
+      /*** illust ***/
+      .illust {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+        z-index: 0;
+
+        .inner,
+        .frame {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+        }
+
+        .frame {
+          box-sizing: border-box;
+          border: solid 0px #fff;
+          z-index: 9;
+        }
+        
+        .hacked {
+          position: absolute;
+          top: 0; left: 0;
+          width: 0%; height: 100%;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url(../images/eriri-animation/hacked.png);
+            background-size: auto 100%;
+          }
+        }
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-size: 100%;
+          opacity: 0;
+        }
+        div:nth-child(1) {
+          z-index: 6;
+          background-image: url(../images/eriri-animation/large-eriri/1.png); }
+        div:nth-child(2) {
+          z-index: 7;
+          background-image: url(../images/eriri-animation/large-eriri/2.png); }
+        div:nth-child(3) {
+          z-index: 3;
+          background-image: url(../images/eriri-animation/large-eriri/3.png); }
+        div:nth-child(4) {
+          z-index: 2;
+          background-image: url(../images/eriri-animation/large-eriri/4.png); }
+        div:nth-child(5) {
+          background-image: url(../images/eriri-animation/large-eriri/5.png); }
+        div:nth-child(6) {
+          z-index: 1;
+          background-image: url(../images/eriri-animation/large-eriri/6.png); }
+        div:nth-child(7) {
+          z-index: 4;
+          background-image: url(../images/eriri-animation/large-eriri/7.png); }
+      }
+
+      /*** palette ***/
+      .palette {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+        z-index: 10;
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          overflow: hidden;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%; height: 100%;
+          }
+        }
+        div:nth-child(1) {
+          &::after {
+            top: 0; right: 0;
+            transform: translateX(-100%);
+            background-color: #E0CFA9; }
+        }
+        div:nth-child(2) {
+          &::after {
+            bottom: 0; left: 0;
+            transform: translateY(-100%);
+            background-color: #AC7F7D; }
+        }
+        div:nth-child(3) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateX(100%);
+            background-color: #36272E; }
+        }
+        div:nth-child(4) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateY(100%);
+            background-color: #F1EAEE; }
+        }
+        div:nth-child(5) {
+          &::after {
+            top: 0; right: 0;
+            transform: translateX(-100%);
+            background-color: #97899F; }
+        }
+        div:nth-child(6) {
+          &::after {
+            bottom: 0; left: 0;
+            transform: translateY(-100%);
+            background-color: #F9EDE8; }
+        }
+        div:nth-child(7) {
+          &::after {
+            top: 0; left: 0;
+            transform: translateX(100%);
+            background-color: #C7E5E8; }
+        }
+      }
+    }
+
+
+    /**
+     * curtain
+     */
+    .curtain {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 20;
+      overflow: hidden;
+      
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 50%; height: 100%;
+        }
+        &::before { transform: translateX(-100%); border-bottom-right-radius: 50%; left: 0; }
+        &::after  { transform: translateX(100%); border-bottom-left-radius: 50%; right: 0; }
+      }
+      div:nth-child(1) {
+        &::before,
+        &::after { background-color: #8FC08B; }
+      }
+      div:nth-child(2) {
+        &::before,
+        &::after { background-color: #5C9056; }
+      }
+    }
+  }
+
+  #eriri-animation[data-state="start"] {
+    /**
+     * bg
+     */
+    .bg {
+      animation: eriri-animation__transform-bg 0.5s ease 0s forwards;
+      .brackets {
+        div:nth-child(1) { animation: eriri-animation__show-bracket1 0.7s ease 0.5s forwards; }
+        div:nth-child(2) { animation: eriri-animation__show-bracket2 0.7s ease 0.5s forwards; }
+        div:nth-child(3) { animation: eriri-animation__show-bracket3 0.7s ease 0.5s forwards; }
+        div:nth-child(4) { animation: eriri-animation__show-bracket4 0.7s ease 0.5s forwards; }
+      }
+      .frames {
+        div:nth-child(1) {
+          &::after { animation: eriri-animation__show-frame1 0.7s ease 1s forwards; } }
+        div:nth-child(2) {
+          &::after { animation: eriri-animation__show-frame2 0.7s ease 1s forwards; } }
+        div:nth-child(3) {
+          &::after { animation: eriri-animation__show-frame3 0.7s ease 1s forwards; } }
+        div:nth-child(4) {
+          &::after { animation: eriri-animation__show-frame4 0.7s ease 1s forwards; } }
+      }
+    }
+    
+    /**
+     * attack-effect
+     */
+    .attack-effect-1 {
+      &::before,
+      &::after { animation: eriri-animation__attack-effect 0.4s ease 7s forwards; }
+    }
+    .attack-effect-2 {
+      &::before,
+      &::after { animation: eriri-animation__attack-effect 0.4s ease 7.5s forwards; }
+    }
+    
+    /**
+     * bg-eriri
+     */
+    .bg-eriri {
+      .arm  { &::after { animation: eriri-animation__bg-eriri-arm 0.7s ease 8s forwards; } }
+      .face { animation: eriri-animation__bg-eriri-face 0.7s ease 8s forwards; }
+    }
+    
+    /**
+     * controls-btn
+     */
+    .controls-btn {
+      animation: eriri-animation__controls-btn-hidden 0.4s ease 4.2s forwards;
+      .ring     { animation: eriri-animation__show-ring 0.35s ease 1.5s forwards; }
+      .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
+      .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }
+    }
+ 
+    /**
+     * collision-effect
+     */
+    .collision-effect {
+      &::before { animation: eriri-animation__collision-effect 0.4s ease 2.8s forwards; }
+      &::after  { animation: eriri-animation__collision-effect 0.4s ease 3.05s forwards; }
+    }
+
+    /**
+     * sd-eriri
+     */
+    .sd-eriri {
+      animation: eriri-animation__sd-eriri-fail 0.5s ease-out 2.7s forwards;
+      .inner { animation: eriri-animation__sd-eriri-hidden 0.5s ease 3.3s forwards; }
+      .ring   { animation: eriri-animation__sd-eriri-ring 0.5s ease 2s forwards; }
+      .circle { animation: eriri-animation__sd-eriri-circle 0.5s ease 2.1s forwards; }
+      .illust {
+        animation: eriri-animation__sd-eriri 0.5s ease-out 2.2s forwards;
+        &::after { animation: fadein 0.2s ease 2.8s forwards; }
+      }
+    }
+    
+    /**
+     * panel
+     */
+    .panel {
+      animation: eriri-animation__panel-down 0.7s ease 8s forwards;
+      &::before { animation: fadein 0.1s ease 4.4s forwards; }
+
+      /*** bars ***/
+      .bars {
+        animation: fadeout 0.1s ease 4.4s forwards;
+        div:nth-child(1) { animation: eriri-animation__panel-bar1 1.5s ease-out 3s forwards; }
+        div:nth-child(2) { animation: eriri-animation__panel-bar2 1.5s ease-out 3s forwards; }
+        div:nth-child(3) { animation: eriri-animation__panel-bar3 1.5s ease-out 3s forwards; }
+        div:nth-child(4) { animation: eriri-animation__panel-bar4 1.5s ease-out 3s forwards; }
+        div:nth-child(5) { animation: eriri-animation__panel-bar5 1.5s ease-out 3s forwards; }
+        div:nth-child(6) { animation: eriri-animation__panel-bar6 1.5s ease-out 3s forwards; }
+        div:nth-child(7) { animation: eriri-animation__panel-bar7 1.5s ease-out 3s forwards; }
+        div:nth-child(8) { animation: eriri-animation__panel-bar8 1.5s ease-out 3s forwards; }
+      }
+      
+      /*** illust ***/
+      .illust {
+        .inner { animation: eriri-animation__illsut-attack 1s ease 7s forwards; }
+        div:nth-child(1) { animation: fadein 0.1s ease 4.85s forwards; }
+        div:nth-child(2) { animation: fadein 0.1s ease 5.15s forwards; }
+        div:nth-child(3) { animation: fadein 0.1s ease 5.45s forwards; }
+        div:nth-child(4) { animation: fadein 0.1s ease 5.75s forwards; }
+        div:nth-child(5) { animation: fadein 0.1s ease 6.05s forwards; }
+        div:nth-child(6) { animation: fadein 0.1s ease 6.35s forwards; }
+        div:nth-child(7) { animation: fadein 0.1s ease 6.65s forwards; }
+        .frame { animation: eriri-animation__illsut-frame 1s ease 7s forwards; }
+        .hacked { animation: eriri-animation__show-hacked 0.7s ease 8s forwards; }
+      }
+
+      /*** palette ***/
+      .palette {
+        div:nth-child(1) {
+          &::after { animation: eriri-animation__palette-show1 0.3s ease 4.7s forwards; } }
+        div:nth-child(2) {
+          &::after { animation: eriri-animation__palette-show2 0.3s ease 5s forwards; } }
+        div:nth-child(3) {
+          &::after { animation: eriri-animation__palette-show3 0.3s ease 5.3s forwards; } }
+        div:nth-child(4) {
+          &::after { animation: eriri-animation__palette-show4 0.3s ease 5.6s forwards; } }
+        div:nth-child(5) {
+          &::after { animation: eriri-animation__palette-show1 0.3s ease 5.9s forwards; } }
+        div:nth-child(6) {
+          &::after { animation: eriri-animation__palette-show2 0.3s ease 6.2s forwards; } }
+        div:nth-child(7) {
+          &::after { animation: eriri-animation__palette-show3 0.3s ease 6.5s forwards; } }
+      }
+    }
+    
+    /**
+     * curtain
+     */
+    .curtain {
+      div:nth-child(1) {
+        &::before { animation: eriri-animation__curtain1 0.7s ease 8.7s forwards; }
+        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.7s forwards; }
+      }
+      div:nth-child(2) {
+        &::before { animation: eriri-animation__curtain1 0.7s ease 8.8s forwards; }
+        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.8s forwards; }
+      }
+    }
+  }
+}
