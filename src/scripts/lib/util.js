@@ -1,5 +1,6 @@
 const load_view = document.getElementById('load-view')
 const progress_bar = document.querySelector('.load-progressbar-mainline')
+const eriri_animation = document.getElementById('eriri-animation')
 
 /**
  * 画像のプリロード
@@ -66,8 +67,22 @@ export const updateProgressBar = per => {
   progress_bar.children[0].style.transform = `translateX(${ -(100 - per) }%)`  
 }
 
+/**
+ * ロードの終了
+ */
 export const finLoadView = () => {
   setTimeout(() => {
     load_view.setAttribute('data-state', 'fin')
+    startEririAnimation()
   }, 800)
+}
+
+/**
+ * eriri-animationの開始
+ */
+export const startEririAnimation = () => {
+  setTimeout(() => {
+    load_view.style.display = 'none'
+    eriri_animation.setAttribute('data-state', 'start')
+  }, 9400)
 }
