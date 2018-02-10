@@ -1,15 +1,15 @@
-$eriri-animation__controls-btn-size: 100px;
-$eriri-animation__sd-eriri-size: 150px;
-$eriri-animation__panel-width: 600px;
-$eriri-animation__panel-height: 332px;
+$eriri-animation__controls-btn-size__sp: 100px;
+$eriri-animation__sd-eriri-size__sp: 100px;
+$eriri-animation__panel-width__sp: 280px;
+$eriri-animation__panel-height__sp: 155px;
 
-@include pc-layout {
+@include sp-layout {
   #eriri-animation {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    min-width: $min-width; min-height: $min-height;
     background-color: #888;
+    overflow: hidden;
     z-index: 999;
     
     /**
@@ -41,25 +41,25 @@ $eriri-animation__panel-height: 332px;
           &::after  { width: 5px; height: 100%; }
         }
         div:nth-child(1) {
-          top: 20px; left: 20px;
+          top: 10px; left: 10px;
           transform: translate(-10px, -10px);
           &::before,
           &::after { top: 0; left: 0; }
         }
         div:nth-child(2) {
           transform: translate(10px, -10px);
-          top: 20px; right: 20px;
+          top: 10px; right: 10px;
           &::before,
           &::after { top: 0; right: 0; }
         }
         div:nth-child(3) {
           transform: translate(-10px, 10px);
-          bottom: 20px; left: 20px;
+          bottom: 10px; left: 10px;
           &::before,
           &::after { bottom: 0; left: 0; }
         }
         div:nth-child(4) {
-          bottom: 20px; right: 20px;
+          bottom: 10px; right: 10px;
           transform: translate(10px, 10px);
           &::before,
           &::after { bottom: 0; right: 0; }
@@ -92,20 +92,20 @@ $eriri-animation__panel-height: 332px;
           top: 60px;
         }
         div:nth-child(1) {
-          top: 20px;
+          top: 10px;
           &::after { transform: translateX(-100%); }
         }
         div:nth-child(3) {
           &::after { transform: translateX(100%); }
-          bottom: 20px;
+          bottom: 10px;
         }
         div:nth-child(2) {
           &::after { transform: translateY(100%); }
-          left: 20px;
+          left: 10px;
         }
         div:nth-child(4) {
           &::after { transform: translateY(-100%); }
-          right: 20px;
+          right: 10px;
         }
       }
     }
@@ -117,22 +117,22 @@ $eriri-animation__panel-height: 332px;
     .attack-effect-2 {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($eriri-animation__panel-height / 2);
-      margin-left: -($eriri-animation__panel-width / 2);
-      width: $eriri-animation__panel-width;
-      height: $eriri-animation__panel-height;
+      margin-top: -($eriri-animation__panel-height__sp / 2);
+      margin-left: -($eriri-animation__panel-width__sp / 2);
+      width: $eriri-animation__panel-width__sp;
+      height: $eriri-animation__panel-height__sp;
 
       &::before,
       &::after {
         content: "";
         display: block;
         position: absolute;
-        width: 120px; height: 120px;
+        width: 80px; height: 80px;
         border-radius: 50%;
         opacity: 0;
       }
-      &::before { top: -60px; right: -60px; }
-      &::after  { bottom: -60px; left: -60px; }
+      &::before { top: -40px; right: -40px; }
+      &::after  { bottom: -40px; left: -40px; }
     }
     .attack-effect-1 {
       &::before,
@@ -149,16 +149,16 @@ $eriri-animation__panel-height: 332px;
     .bg-eriri {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($eriri-animation__panel-height / 2);
-      margin-left: -($eriri-animation__panel-width / 2);
-      width: $eriri-animation__panel-width;
-      height: $eriri-animation__panel-height;
+      margin-top: -($eriri-animation__panel-height__sp / 2);
+      margin-left: -($eriri-animation__panel-width__sp / 2);
+      width: $eriri-animation__panel-width__sp;
+      height: $eriri-animation__panel-height__sp;
 
       .face {
         position: absolute;
         top: -100px; left: 50%;
-        margin-left: -118.5px;
-        width: 237px; height: 200px;
+        margin-left: -89px;
+        width: 178px; height: 150px;
         background-image: url(../images/eriri-animation/bg-eriri/face.png);
         background-size: 100%;
         opacity: 0;
@@ -174,8 +174,8 @@ $eriri-animation__panel-height: 332px;
           content: "";
           display: block;
           position: absolute;
-          top: -30px; left: 300px;
-          width: 70px; height: 70px;
+          top: -16px; left: 120px;
+          width: 40px; height: 40px;
           background-size: 100%;
           background-position: center;
           background-image: url(../images/eriri-animation/bg-eriri/arm-2.png);
@@ -190,10 +190,10 @@ $eriri-animation__panel-height: 332px;
     .controls-btn {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($eriri-animation__controls-btn-size / 2);
-      margin-left: -($eriri-animation__controls-btn-size / 2);
-      width: $eriri-animation__controls-btn-size;
-      height: $eriri-animation__controls-btn-size;
+      margin-top: -($eriri-animation__controls-btn-size__sp / 2);
+      margin-left: -($eriri-animation__controls-btn-size__sp / 2);
+      width: $eriri-animation__controls-btn-size__sp;
+      height: $eriri-animation__controls-btn-size__sp;
 
       .ring {
         position: absolute;
@@ -268,11 +268,11 @@ $eriri-animation__panel-height: 332px;
     .sd-eriri {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($eriri-animation__sd-eriri-size / 2);
-      margin-left: -($eriri-animation__sd-eriri-size / 2);
-      width: $eriri-animation__sd-eriri-size;
-      height: $eriri-animation__sd-eriri-size;
-      transform: translateY(-($eriri-animation__sd-eriri-size + 50px));
+      margin-top: -($eriri-animation__sd-eriri-size__sp / 2);
+      margin-left: -($eriri-animation__sd-eriri-size__sp / 2);
+      width: $eriri-animation__sd-eriri-size__sp;
+      height: $eriri-animation__sd-eriri-size__sp;
+      transform: translateY(-($eriri-animation__sd-eriri-size__sp + 50px));
 
       .circle,
       .ring,
@@ -323,10 +323,10 @@ $eriri-animation__panel-height: 332px;
     .panel {
       position: absolute;
       top: 50%; left: 50%;
-      margin-top: -($eriri-animation__panel-height / 2);
-      margin-left: -($eriri-animation__panel-width / 2);
-      width: $eriri-animation__panel-width;
-      height: $eriri-animation__panel-height;
+      margin-top: -($eriri-animation__panel-height__sp / 2);
+      margin-left: -($eriri-animation__panel-width__sp / 2);
+      width: $eriri-animation__panel-width__sp;
+      height: $eriri-animation__panel-height__sp;
 
       &::before {
         content: "";
@@ -537,22 +537,22 @@ $eriri-animation__panel-height: 332px;
      * bg
      */
     .bg {
-      animation: eriri-animation__transform-bg 0.5s ease 0s forwards;
+      animation: eriri-animation__transform-bg__sp 0.5s ease 0s forwards;
       .brackets {
-        div:nth-child(1) { animation: eriri-animation__show-bracket1 0.7s ease 0.5s forwards; }
-        div:nth-child(2) { animation: eriri-animation__show-bracket2 0.7s ease 0.5s forwards; }
-        div:nth-child(3) { animation: eriri-animation__show-bracket3 0.7s ease 0.5s forwards; }
-        div:nth-child(4) { animation: eriri-animation__show-bracket4 0.7s ease 0.5s forwards; }
+        div:nth-child(1) { animation: eriri-animation__show-bracket1__sp 0.7s ease 0.5s forwards; }
+        div:nth-child(2) { animation: eriri-animation__show-bracket2__sp 0.7s ease 0.5s forwards; }
+        div:nth-child(3) { animation: eriri-animation__show-bracket3__sp 0.7s ease 0.5s forwards; }
+        div:nth-child(4) { animation: eriri-animation__show-bracket4__sp 0.7s ease 0.5s forwards; }
       }
       .frames {
         div:nth-child(1) {
-          &::after { animation: eriri-animation__show-frame1 0.7s ease 1s forwards; } }
+          &::after { animation: eriri-animation__show-frame1__sp 0.7s ease 1s forwards; } }
         div:nth-child(2) {
-          &::after { animation: eriri-animation__show-frame2 0.7s ease 1s forwards; } }
+          &::after { animation: eriri-animation__show-frame2__sp 0.7s ease 1s forwards; } }
         div:nth-child(3) {
-          &::after { animation: eriri-animation__show-frame3 0.7s ease 1s forwards; } }
+          &::after { animation: eriri-animation__show-frame3__sp 0.7s ease 1s forwards; } }
         div:nth-child(4) {
-          &::after { animation: eriri-animation__show-frame4 0.7s ease 1s forwards; } }
+          &::after { animation: eriri-animation__show-frame4__sp 0.7s ease 1s forwards; } }
       }
     }
     
@@ -561,49 +561,49 @@ $eriri-animation__panel-height: 332px;
      */
     .attack-effect-1 {
       &::before,
-      &::after { animation: eriri-animation__attack-effect 0.4s ease 7s forwards; }
+      &::after { animation: eriri-animation__attack-effect__sp 0.4s ease 7s forwards; }
     }
     .attack-effect-2 {
       &::before,
-      &::after { animation: eriri-animation__attack-effect 0.4s ease 7.5s forwards; }
+      &::after { animation: eriri-animation__attack-effect__sp 0.4s ease 7.5s forwards; }
     }
     
     /**
      * bg-eriri
      */
     .bg-eriri {
-      .arm  { &::after { animation: eriri-animation__bg-eriri-arm 0.7s ease 8s forwards; } }
-      .face { animation: eriri-animation__bg-eriri-face 0.7s ease 8s forwards; }
+      .arm  { &::after { animation: eriri-animation__bg-eriri-arm__sp 0.7s ease 8s forwards; } }
+      .face { animation: eriri-animation__bg-eriri-face__sp 0.7s ease 8s forwards; }
     }
     
     /**
      * controls-btn
      */
     .controls-btn {
-      animation: eriri-animation__controls-btn-hidden 0.4s ease 4.2s forwards;
-      .ring     { animation: eriri-animation__show-ring 0.35s ease 1.5s forwards; }
-      .play-btn { animation: eriri-animation__show-btn 0.35s ease 1.7s forwards; }
-      .stop-btn { animation: eriri-animation__show-btn 0.35s ease 3s forwards; }
+      animation: eriri-animation__controls-btn-hidden__sp 0.4s ease 4.2s forwards;
+      .ring     { animation: eriri-animation__show-ring__sp 0.35s ease 1.5s forwards; }
+      .play-btn { animation: eriri-animation__show-btn__sp 0.35s ease 1.7s forwards; }
+      .stop-btn { animation: eriri-animation__show-btn__sp 0.35s ease 3s forwards; }
     }
  
     /**
      * collision-effect
      */
     .collision-effect {
-      &::before { animation: eriri-animation__collision-effect 0.4s ease 2.8s forwards; }
-      &::after  { animation: eriri-animation__collision-effect 0.4s ease 3.05s forwards; }
+      &::before { animation: eriri-animation__collision-effect__sp 0.4s ease 2.8s forwards; }
+      &::after  { animation: eriri-animation__collision-effect__sp 0.4s ease 3.05s forwards; }
     }
 
     /**
      * sd-eriri
      */
     .sd-eriri {
-      animation: eriri-animation__sd-eriri-fail 0.5s ease-out 2.7s forwards;
-      .inner { animation: eriri-animation__sd-eriri-hidden 0.5s ease 3.3s forwards; }
-      .ring   { animation: eriri-animation__sd-eriri-ring 0.5s ease 2s forwards; }
-      .circle { animation: eriri-animation__sd-eriri-circle 0.5s ease 2.1s forwards; }
+      animation: eriri-animation__sd-eriri-fail__sp 0.5s ease-out 2.7s forwards;
+      .inner { animation: eriri-animation__sd-eriri-hidden__sp 0.5s ease 3.3s forwards; }
+      .ring   { animation: eriri-animation__sd-eriri-ring__sp 0.5s ease 2s forwards; }
+      .circle { animation: eriri-animation__sd-eriri-circle__sp 0.5s ease 2.1s forwards; }
       .illust {
-        animation: eriri-animation__sd-eriri 0.5s ease-out 2.2s forwards;
+        animation: eriri-animation__sd-eriri__sp 0.5s ease-out 2.2s forwards;
         &::after { animation: fadein 0.2s ease 2.8s forwards; }
       }
     }
@@ -612,25 +612,25 @@ $eriri-animation__panel-height: 332px;
      * panel
      */
     .panel {
-      animation: eriri-animation__panel-down 0.7s ease 8s forwards;
+      animation: eriri-animation__panel-down__sp 0.7s ease 8s forwards;
       &::before { animation: fadein 0.1s ease 4.4s forwards; }
 
       /*** bars ***/
       .bars {
         animation: fadeout 0.1s ease 4.4s forwards;
-        div:nth-child(1) { animation: eriri-animation__panel-bar1 1.5s ease-out 3s forwards; }
-        div:nth-child(2) { animation: eriri-animation__panel-bar2 1.5s ease-out 3s forwards; }
-        div:nth-child(3) { animation: eriri-animation__panel-bar3 1.5s ease-out 3s forwards; }
-        div:nth-child(4) { animation: eriri-animation__panel-bar4 1.5s ease-out 3s forwards; }
-        div:nth-child(5) { animation: eriri-animation__panel-bar5 1.5s ease-out 3s forwards; }
-        div:nth-child(6) { animation: eriri-animation__panel-bar6 1.5s ease-out 3s forwards; }
-        div:nth-child(7) { animation: eriri-animation__panel-bar7 1.5s ease-out 3s forwards; }
-        div:nth-child(8) { animation: eriri-animation__panel-bar8 1.5s ease-out 3s forwards; }
+        div:nth-child(1) { animation: eriri-animation__panel-bar1__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(2) { animation: eriri-animation__panel-bar2__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(3) { animation: eriri-animation__panel-bar3__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(4) { animation: eriri-animation__panel-bar4__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(5) { animation: eriri-animation__panel-bar5__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(6) { animation: eriri-animation__panel-bar6__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(7) { animation: eriri-animation__panel-bar7__sp 1.5s ease-out 3s forwards; }
+        div:nth-child(8) { animation: eriri-animation__panel-bar8__sp 1.5s ease-out 3s forwards; }
       }
       
       /*** illust ***/
       .illust {
-        .inner { animation: eriri-animation__illsut-attack 1s ease 7s forwards; }
+        .inner { animation: eriri-animation__illsut-attack__sp 1s ease 7s forwards; }
         div:nth-child(1) { animation: fadein 0.1s ease 4.85s forwards; }
         div:nth-child(2) { animation: fadein 0.1s ease 5.15s forwards; }
         div:nth-child(3) { animation: fadein 0.1s ease 5.45s forwards; }
@@ -638,26 +638,26 @@ $eriri-animation__panel-height: 332px;
         div:nth-child(5) { animation: fadein 0.1s ease 6.05s forwards; }
         div:nth-child(6) { animation: fadein 0.1s ease 6.35s forwards; }
         div:nth-child(7) { animation: fadein 0.1s ease 6.65s forwards; }
-        .frame { animation: eriri-animation__illsut-frame 1s ease 7s forwards; }
-        .hacked { animation: eriri-animation__show-hacked 0.7s ease 8s forwards; }
+        .frame { animation: eriri-animation__illsut-frame__sp 1s ease 7s forwards; }
+        .hacked { animation: eriri-animation__show-hacked__sp 0.7s ease 8s forwards; }
       }
 
       /*** palette ***/
       .palette {
         div:nth-child(1) {
-          &::after { animation: eriri-animation__palette-show1 0.3s ease 4.7s forwards; } }
+          &::after { animation: eriri-animation__palette-show1__sp 0.3s ease 4.7s forwards; } }
         div:nth-child(2) {
-          &::after { animation: eriri-animation__palette-show2 0.3s ease 5s forwards; } }
+          &::after { animation: eriri-animation__palette-show2__sp 0.3s ease 5s forwards; } }
         div:nth-child(3) {
-          &::after { animation: eriri-animation__palette-show3 0.3s ease 5.3s forwards; } }
+          &::after { animation: eriri-animation__palette-show3__sp 0.3s ease 5.3s forwards; } }
         div:nth-child(4) {
-          &::after { animation: eriri-animation__palette-show4 0.3s ease 5.6s forwards; } }
+          &::after { animation: eriri-animation__palette-show4__sp 0.3s ease 5.6s forwards; } }
         div:nth-child(5) {
-          &::after { animation: eriri-animation__palette-show1 0.3s ease 5.9s forwards; } }
+          &::after { animation: eriri-animation__palette-show1__sp 0.3s ease 5.9s forwards; } }
         div:nth-child(6) {
-          &::after { animation: eriri-animation__palette-show2 0.3s ease 6.2s forwards; } }
+          &::after { animation: eriri-animation__palette-show2__sp 0.3s ease 6.2s forwards; } }
         div:nth-child(7) {
-          &::after { animation: eriri-animation__palette-show3 0.3s ease 6.5s forwards; } }
+          &::after { animation: eriri-animation__palette-show3__sp 0.3s ease 6.5s forwards; } }
       }
     }
     
@@ -666,12 +666,12 @@ $eriri-animation__panel-height: 332px;
      */
     .curtain {
       div:nth-child(1) {
-        &::before { animation: eriri-animation__curtain1 0.7s ease 8.7s forwards; }
-        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.7s forwards; }
+        &::before { animation: eriri-animation__curtain1__sp 0.7s ease 8.7s forwards; }
+        &::after  { animation: eriri-animation__curtain2__sp 0.7s ease 8.7s forwards; }
       }
       div:nth-child(2) {
-        &::before { animation: eriri-animation__curtain1 0.7s ease 8.8s forwards; }
-        &::after  { animation: eriri-animation__curtain2 0.7s ease 8.8s forwards; }
+        &::before { animation: eriri-animation__curtain1__sp 0.7s ease 8.8s forwards; }
+        &::after  { animation: eriri-animation__curtain2__sp 0.7s ease 8.8s forwards; }
       }
     }
   }
