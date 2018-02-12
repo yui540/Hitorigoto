@@ -37,3 +37,16 @@
   30%  { transform: rotate(320deg) translateX(-50px); background-color: #8A96F3; }
   100% { transform: rotate(325deg) translateX(-50px); background-color: #8A96F3; }
 }
+
+
+/*** show-display ***/
+@keyframes title-animation__show-display {
+  0%   { margin-left: 0px; width: 0%; }
+  100% { margin-left: -325px; width: 100%; }
+}
+
+/*** shadow-display ***/
+@keyframes title-animation__shadow-display {
+  0%   { box-shadow: 0 0 0px #333; }
+  100% { box-shadow: 0 0 20px #333; }
+}

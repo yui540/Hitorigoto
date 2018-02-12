@@ -100,5 +100,14 @@
         title-animation__move-spotlight4 1s ease-out 4.5s forwards,
         title-animation__move-spotlight5 1s ease-out 5.5s forwards;
     }
+    
+    /**
+     * display
+     */
+    .display {
+      animation: title-animation__shadow-display 0.3s ease 1.6s forwards;
+      &::before { animation: title-animation__show-display 0.5s ease 1s forwards; }
+      &::after  { animation: title-animation__show-display 0.5s ease 1.1s forwards; }
+    }
   }
 }
