@@ -39,6 +39,18 @@
       &::before { background-color: #ce6ede; }
       &::after  { background-color: #86308B; }
     }
+
+    /**
+     * spotlight
+     */
+    .spotlight {
+      position: absolute;
+      top: -100%; left: calc(50%);
+      width: 0px; height: 300%;
+      background-color: #FEF9CC;
+      transform: rotate(35deg);
+      z-index: 2;
+    }
   }
 
   #title-animation[data-state="start"] {
