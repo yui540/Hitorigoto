@@ -1,6 +1,7 @@
 const load_view = document.getElementById('load-view')
 const progress_bar = document.querySelector('.load-progressbar-mainline')
 const eriri_animation = document.getElementById('eriri-animation')
+const title_animation = document.getElementById('title-animation')
 
 /**
  * 画像のプリロード
@@ -84,5 +85,16 @@ export const startEririAnimation = () => {
   setTimeout(() => {
     load_view.style.display = 'none'
     eriri_animation.setAttribute('data-state', 'start')
+    startTitleAnimation()
   }, 9400)
+}
+
+/**
+ * title-animationの開始
+ */
+export const startTitleAnimation = () => {
+  setTimeout(() => {
+    eriri_animation.style.display = 'none'
+    title_animation.setAttribute('data-state', 'start')
+  }, 9500)
 }
