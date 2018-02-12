@@ -18,24 +18,24 @@
   100% { transform: rotate(-35deg) translateX(-50px); }
 }
 @keyframes title-animation__move-spotlight2 {
-  0%   { transform: rotate(-35deg) translateX(-40px); background-color: #FEF9CC; }
-  30%  { transform: rotate(30deg) translateX(-10px); background-color: #A2F1FB; }
-  100% { transform: rotate(35deg) translateX(0px); background-color: #A2F1FB; }
+  0%   { transform: rotate(-35deg) translateX(-40px); background-color: $theme-yellow; }
+  30%  { transform: rotate(30deg) translateX(-10px); background-color: $theme-green; }
+  100% { transform: rotate(35deg) translateX(0px); background-color: $theme-green; }
 }
 @keyframes title-animation__move-spotlight3 {
-  0%   { transform: rotate(35deg) translateX(0px); background-color: #A2F1F8; }
-  30%  { transform: rotate(135deg) translateX(0px); background-color: #A1E790; }
-  100% { transform: rotate(140deg) translateX(0px); background-color: #A1E790; }
+  0%   { transform: rotate(35deg) translateX(0px); background-color: $theme-green; }
+  30%  { transform: rotate(135deg) translateX(0px); background-color: $theme-red; }
+  100% { transform: rotate(140deg) translateX(0px); background-color: $theme-red; }
 }
 @keyframes title-animation__move-spotlight4 {
-  0%   { transform: rotate(140deg) translateX(0px); background-color: #A1E790; }
-  30%  { transform: rotate(220deg) translateX(-40px); background-color: #E9A9F8; }
-  100% { transform: rotate(225deg) translateX(-50px); background-color: #E9A9F8; }
+  0%   { transform: rotate(140deg) translateX(0px); background-color: $theme-red; }
+  30%  { transform: rotate(220deg) translateX(-40px); background-color: $theme-blue; }
+  100% { transform: rotate(225deg) translateX(-50px); background-color: $theme-blue; }
 }
 @keyframes title-animation__move-spotlight5 {
-  0%   { transform: rotate(225deg) translateX(-50px); background-color: #E9A9F8; }
-  30%  { transform: rotate(320deg) translateX(-50px); background-color: #8A96F3; }
-  100% { transform: rotate(325deg) translateX(-50px); background-color: #8A96F3; }
+  0%   { transform: rotate(225deg) translateX(-50px); background-color: $theme-blue; }
+  30%  { transform: rotate(320deg) translateX(-50px); background-color: $theme-purple; }
+  100% { transform: rotate(325deg) translateX(-50px); background-color: $theme-purple; }
 }
 
 

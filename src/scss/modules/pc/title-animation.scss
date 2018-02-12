@@ -47,7 +47,7 @@
       position: absolute;
       top: -100%; left: calc(50%);
       width: 0px; height: 300%;
-      background-color: #FEF9CC;
+      background-color: $theme-yellow;
       transform: rotate(35deg);
       z-index: 2;
     }
@@ -74,7 +74,7 @@
         width: 0%; height: 100%;
       }
       &::before { background-color: #eee; }
-      &::after  { background-color: #FEF9CC; }
+      &::after  { background-color: $theme-yellow; }
     }
   }
 
