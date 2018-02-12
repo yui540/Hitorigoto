@@ -47,6 +47,19 @@
 
 /*** shadow-display ***/
 @keyframes title-animation__shadow-display {
-  0%   { box-shadow: 0 0 0px #333; }
-  100% { box-shadow: 0 0 20px #333; }
+  0%   { box-shadow: 0 0 0px #fff; }
+  100% { box-shadow: 0 0 10px #fff; }
+}
+
+/*** show-layer ***/
+@keyframes title-animation__show-layer {
+  0%   { width: 0; }
+  100% { width: 100%; }
+}
+
+/*** scale-word ***/
+@keyframes title-animation__scale-word {
+  0%   { transform: scale(0.5) rotate(15deg); }
+  30%  { transform: scale(1.2) rotate(2deg); }
+  100% { transform: scale(1.25) rotate(0deg); }
 }
