@@ -8,6 +8,16 @@
     overflow: hidden;
     z-index: 1001;
 
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(50% - 2.5px); left: 0;
+      width: 0%; height: 5px;
+      background-color: $theme-yellow;
+      z-index: 6;
+    }
+
     /**
      * curtain
      */
@@ -141,6 +151,8 @@
   }
 
   #title-animation[data-state="start"] {
+    &::after { animation: title-animation__close 1s ease 6s forwards; }
+
     /**
      * curtain
      */
