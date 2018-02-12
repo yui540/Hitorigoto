@@ -64,17 +64,24 @@
       box-shadow: 0 0 0px #333;
       z-index: 3;
 
-      &::before,
-      &::after {
-        content: "";
-        display: block;
+      /*** bg ***/
+      .bg {
         position: absolute;
-        top: 0; left: 50%;
-        margin-left: 0;
-        width: 0%; height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0; left: 50%;
+          margin-left: 0;
+          width: 0%; height: 100%;
+        }
+        &::before { background-color: #eee; }
+        &::after  { background-color: $theme-yellow; }
       }
-      &::before { background-color: #eee; }
-      &::after  { background-color: $theme-yellow; }
     }
   }
 
@@ -106,8 +113,12 @@
      */
     .display {
       animation: title-animation__shadow-display 0.3s ease 1.6s forwards;
-      &::before { animation: title-animation__show-display 0.5s ease 1s forwards; }
-      &::after  { animation: title-animation__show-display 0.5s ease 1.1s forwards; }
+      
+      /*** bg ***/
+      .bg {
+        &::before { animation: title-animation__show-display 0.5s ease 1s forwards; }
+        &::after  { animation: title-animation__show-display 0.5s ease 1.1s forwards; }
+      }
     }
   }
 }
