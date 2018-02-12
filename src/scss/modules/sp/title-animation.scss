@@ -1,0 +1,212 @@
+@include sp-layout {
+  #title-animation {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #5C9056;
+    overflow: hidden;
+    z-index: 998;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(50% - 2.5px); left: 0;
+      width: 0%; height: 5px;
+      background-color: $theme-yellow;
+      z-index: 6;
+    }
+
+    /**
+     * curtain
+     */
+    .curtain {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+     
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url(../images/title-animation/bg.png);
+        opacity: 0;
+        z-index: 1;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        transform: translateY(100%);
+      }
+      &::before { background-color: #ce6ede; }
+      &::after  { background-color: #86308B; }
+    }
+
+    /**
+     * spotlight
+     */
+    .spotlight {
+      position: absolute;
+      top: -100%; left: calc(50%);
+      width: 0px; height: 300%;
+      background-color: $theme-yellow;
+      transform: rotate(35deg);
+      z-index: 2;
+    }
+
+    /**
+     * display
+     */
+    .display {
+      position: absolute;
+      top: 50%; left: 50%;
+      margin-left: -160px;
+      margin-top: -100px;
+      width: 320px; height: 200px;
+      box-shadow: 0 0 0px #333;
+      z-index: 3;
+
+      /*** bg ***/
+      .bg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0; left: 50%;
+          margin-left: 0;
+          width: 0%; height: 100%;
+        }
+        &::before { background-color: #eee; }
+        &::after  { background-color: $theme-yellow; }
+      }
+
+      /*** layer ***/
+      .layer {
+        position: absolute;
+        top: 0; left: 0;
+        width: 0%; height: 100%;
+        z-index: 5;
+        overflow: hidden;
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 320px; height: 200px;
+
+          &::after {
+            position: absolute;
+            content: ""; display: block;
+            top: 20px;
+            width: 160px; height: 160px;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .layer-1 {
+        div {
+          background-color: $theme-yellow;
+          &::after { right: 20px; background-image: url(../images/title-animation/word-1.png); }
+        }
+      }
+      .layer-2 {
+        div {
+          background-color: $theme-green;
+          &::after { left: 20px; background-image: url(../images/title-animation/word-2.png); }
+        }
+      }
+      .layer-3 {
+        div {
+          background-color: $theme-red;
+          &::after { right: 20px; background-image: url(../images/title-animation/word-3.png); }
+        }
+      }
+      .layer-4 {
+        div {
+          background-color: $theme-blue;
+          &::after { left: 20px; background-image: url(../images/title-animation/word-4.png); }
+        }
+      }
+      .layer-5 {
+        div {
+          background-color: $theme-purple;
+          &::after { right: 20px; background-image: url(../images/title-animation/word-5.png); }
+        }
+      }
+    }
+  }
+
+  #title-animation[data-state="start"] {
+    &::after { animation: title-animation__close__sp 1s ease 6s forwards; }
+
+    /**
+     * curtain
+     */
+    .curtain {
+      &::before { animation: title-animation__close-curtain__sp 0.7s ease 0.2s forwards; }
+      &::after  { animation: title-animation__close-curtain__sp 0.7s ease 0.3s forwards; }
+      div       { animation: fadein 0.5s ease 1s forwards; }
+    }
+    
+    /**
+     * spotlight
+     */
+    .spotlight {
+      animation:
+        title-animation__show-spotlight__sp 0.5s ease 1s forwards,
+        title-animation__move-spotlight1__sp 1s ease-out 1.5s forwards,
+        title-animation__move-spotlight2__sp 1s ease-out 2.5s forwards,
+        title-animation__move-spotlight3__sp 1s ease-out 3.5s forwards,
+        title-animation__move-spotlight4__sp 1s ease-out 4.5s forwards,
+        title-animation__move-spotlight5__sp 1s ease-out 5.5s forwards;
+    }
+    
+    /**
+     * display
+     */
+    .display {
+      animation: title-animation__shadow-display__sp 0.3s ease 1.6s forwards;
+      
+      /*** bg ***/
+      .bg {
+        &::before { animation: title-animation__show-display__sp 0.5s ease 1s forwards; }
+        &::after  { animation: title-animation__show-display__sp 0.5s ease 1.1s forwards; }
+      }
+      
+      /*** layer ***/
+      .layer-1 {
+        animation: title-animation__show-layer__sp 0.3s ease-out 1.5s forwards;
+        div { &::after { animation: title-animation__scale-word__sp 1.5s ease 1.5s forwards; } }
+      }
+      .layer-2 {
+        animation: title-animation__show-layer__sp 0.3s ease-out 2.5s forwards;
+        div { &::after { animation: title-animation__scale-word__sp 1.5s ease 2.5s forwards; } }
+      }
+      .layer-3 {
+        animation: title-animation__show-layer__sp 0.3s ease-out 3.5s forwards;
+        div { &::after { animation: title-animation__scale-word__sp 1.5s ease 3.5s forwards; } }
+      }
+      .layer-4 {
+        animation: title-animation__show-layer__sp 0.3s ease-out 4.5s forwards;
+        div { &::after { animation: title-animation__scale-word__sp 1.5s ease 4.5s forwards; } }
+      }
+      .layer-5 {
+        animation: title-animation__show-layer__sp 0.3s ease-out 5.5s forwards;
+        div { &::after { animation: title-animation__scale-word__sp 1.5s ease 5.5s forwards; } }
+      }
+    }
+  }
+}
