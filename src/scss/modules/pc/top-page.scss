@@ -337,5 +337,13 @@
       .nav-li:nth-child(3) { animation: fadein 0.7s ease 6.2s forwards; }
       .nav-li:nth-child(4) { animation: fadein 0.7s ease 6.3s forwards; }
     }
+    
+    /**
+     * sns-nav
+     */
+    .sns-nav {
+      a:nth-child(1) { animation: fadein 0.7s ease 6.4s forwards; }
+      a:nth-child(2) { animation: fadein 0.7s ease 6.5s forwards; }
+    }
   }
 }
