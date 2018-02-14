@@ -111,6 +111,46 @@
   }
 
   #top-page[data-state="start"] {
-    
+    &::after {
+      animation: 
+        top-page__show 0.75s ease-out 0s forwards,
+        top-page__move-circle-top 0.8s ease 0.75s forwards,
+        top-page__transform-square 0.35s ease 1.6s forwards,
+        top-page__transform-rotate 0.35s ease 1.95s forwards,
+        top-page__transform-circle 0.35s ease 2.3s forwards,
+        fadeout 0.7s ease 2.65s forwards;
+    }
+
+    /**
+     * title
+     */
+    .title {
+      div {
+        &::before {
+          animation: 
+            top-page__move-circle 0.8s ease 0.8s forwards,
+            top-page__transform-square 0.35s ease 1.6s forwards,
+            top-page__transform-rotate 0.35s ease 1.95s forwards,
+            top-page__transform-circle 0.35s ease 2.3s forwards,
+            fadeout 0.7s ease 2.65s forwards;
+        }
+      }
+      div:nth-child(1) {
+        &::before { animation: none; }
+        &::after { animation: top-page__show-word1 0.7s ease 3s forwards; }
+      }
+      div:nth-child(2) {
+        &::after { animation: top-page__show-word2 0.7s ease 3.2s forwards; }
+      }
+      div:nth-child(3) {
+        &::after { animation: top-page__show-word3 0.7s ease 3.4s forwards; }
+      }
+      div:nth-child(4) {
+        &::after { animation: top-page__show-word4 0.7s ease 3.6s forwards; }
+      }
+      div:nth-child(5) {
+        &::after { animation: top-page__show-word5 0.7s ease 3.8s forwards; }
+      }
+    }   
   }
 }
