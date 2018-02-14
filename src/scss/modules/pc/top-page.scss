@@ -159,7 +159,16 @@
         top-page__transform-circle 0.35s ease 2.3s forwards,
         fadeout 0.7s ease 2.65s forwards;
     }
-
+    
+    /**
+     * main-illust
+     */
+    .main-illust {
+      div:nth-child(1) { animation: top-page__show-main-illust 0.7s ease 4.4s forwards; }
+      div:nth-child(2) { animation: top-page__show-main-illust 0.7s ease 4.8s forwards; }
+      div:nth-child(3) { animation: top-page__show-main-illust 0.7s ease 5.2s forwards; }
+    }
+    
     /**
      * title
      */

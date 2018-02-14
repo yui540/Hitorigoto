@@ -63,3 +63,10 @@
   0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
   100% { transform: translateY(-5px) rotate(5deg); opacity: 1; }
 }
+
+
+/*** show-main-illust ***/
+@keyframes top-page__show-main-illust {
+  0%   { height: 0; }
+  100% { height: 100%; }
+}
