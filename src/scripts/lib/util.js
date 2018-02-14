@@ -2,6 +2,7 @@ const load_view = document.getElementById('load-view')
 const progress_bar = document.querySelector('.load-progressbar-mainline')
 const eriri_animation = document.getElementById('eriri-animation')
 const title_animation = document.getElementById('title-animation')
+const top_page = document.getElementById('top-page')
 
 /**
  * 画像のプリロード
@@ -96,5 +97,30 @@ export const startTitleAnimation = () => {
   setTimeout(() => {
     eriri_animation.style.display = 'none'
     title_animation.setAttribute('data-state', 'start')
+    startTopPage()
   }, 9500)
+}
+
+/**
+ * top-pageの開始
+ */
+export const startTopPage = () => {
+  setTimeout(() => {
+    title_animation.style.display = 'none'
+    top_page.setAttribute('data-state', 'start')
+  }, 7000)
+}
+
+/**
+ * main-illustのサイズを設定
+ */
+export const setMainIllustSize = () => {
+  let height = 0
+  if(isPC()) height = window.innerHeight >= 650 ? window.innerHeight : 650
+  else       height = screen.height
+  const child = document.querySelectorAll('.main-illust div section')
+  
+  child.forEach((node) => {
+    node.style.height = `${ height }px`
+  })
 }
