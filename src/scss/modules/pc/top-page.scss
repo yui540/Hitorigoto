@@ -39,13 +39,14 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
 
-      div {
+      /*** illust ***/
+      .illust {
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 0%;
         overflow: hidden;
         
-        section {
+        .image {
           content: "";
           display: block;
           position: absolute;
@@ -56,17 +57,60 @@
           background-position: center;
         }
       }
-      div:nth-child(1) {
+      .illust:nth-child(1) {
         background-color: #C5D946;
-        section { background-image: url(../images/top-page/main-illust/1.png); }
+        .image { background-image: url(../images/top-page/main-illust/1.png); }
       }
-      div:nth-child(2) {
+      .illust:nth-child(2) {
         background-color: #F9DD71;
-        section { background-image: url(../images/top-page/main-illust/2.png); }
+        .image { background-image: url(../images/top-page/main-illust/2.png); }
       }
-      div:nth-child(3) {
+      .illust:nth-child(3) {
         background-color: #eee;
-        section { background-image: url(../images/top-page/main-illust/3.png); }
+        .image { background-image: url(../images/top-page/main-illust/3.png); }
+      }
+
+      /*** nav-effect ***/
+      .nav-effect {
+        position: absolute;
+        top: 50%; right: 260px;
+        margin-top: -100px;
+        width: 800px; height: 200px;
+
+        section {
+          position: relative;
+          width: 100%; height: 50px;
+
+          div {
+            position: absolute;
+            right: 0;
+            overflow: hidden;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0; left: 0;
+              width: 100%; height: 100%;
+              background-color: #999; 
+              transform: translateX(100%);
+            }
+          }
+          div:nth-child(1) { top: 10px; width: 200px; height: 4px; }
+          div:nth-child(2) { bottom: 18px; width: 350px; height: 1px; }
+          div:nth-child(3) { bottom: 10px; width: 100%; height: 2px; }
+        }
+        section[data-hover="true"] {
+          div:nth-child(1) {
+            &::after { animation: top-page__hover-global-nav-effect 0.7s ease 0.1s forwards; }
+          }
+          div:nth-child(2) {
+            &::after { animation: top-page__hover-global-nav-effect 0.5s ease 0.2s forwards; }
+          }
+          div:nth-child(3) {
+            &::after { animation: top-page__hover-global-nav-effect 0.3s ease 0s forwards; }
+          }
+        }
       }
     }
 
@@ -147,6 +191,60 @@
         }
       }
     }
+
+    /**
+     * global-nav
+     */
+    .global-nav {
+      position: absolute;
+      top: 50%; right: 20px;
+      margin-top: -100px;
+      width: 200px; height: 200px;
+
+      .nav-li {
+        position: relative;
+        width: 100%; height: 50px;
+        display: block;
+        opacity: 0;
+
+        .triangle {
+          position: absolute;
+          top: 15px; left: 0;
+          border-left: solid 15px #666;
+          border-top: solid 10px transparent;
+          border-bottom: solid 10px transparent;
+        }
+
+        .text {
+          position: absolute;
+          top: 0; left: 25px;
+          height: 50px;
+          font-size: 15px;
+          color: #666;
+          line-height: 50px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 5px; left: 0;
+          width: 180px; height: 15px;
+          background-color: rgba(70,70,70,0.1);
+          transition: all 0.3s ease 0s;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+      .nav-li:hover {
+        animation: top-page__hover-global-nav 0.6s ease-out 0s forwards;
+        &::before { height: 40px; }
+      }
+    }
   }
 
   #top-page[data-state="start"] {
@@ -164,9 +262,9 @@
      * main-illust
      */
     .main-illust {
-      div:nth-child(1) { animation: top-page__show-main-illust 0.7s ease 4.4s forwards; }
-      div:nth-child(2) { animation: top-page__show-main-illust 0.7s ease 4.8s forwards; }
-      div:nth-child(3) { animation: top-page__show-main-illust 0.7s ease 5.2s forwards; }
+      .illust:nth-child(1) { animation: top-page__show-main-illust 0.7s ease 4.4s forwards; }
+      .illust:nth-child(2) { animation: top-page__show-main-illust 0.7s ease 4.8s forwards; }
+      .illust:nth-child(3) { animation: top-page__show-main-illust 0.7s ease 5.2s forwards; }
     }
     
     /**
