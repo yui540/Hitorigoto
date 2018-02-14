@@ -75,7 +75,7 @@
         position: absolute;
         top: 50%; right: 260px;
         margin-top: -100px;
-        width: 800px; height: 200px;
+        width: 600px; height: 200px;
 
         section {
           position: relative;
@@ -243,6 +243,35 @@
       .nav-li:hover {
         animation: top-page__hover-global-nav 0.6s ease-out 0s forwards;
         &::before { height: 40px; }
+      }
+    }
+
+    /**
+     * sns-nav
+     */
+    .sns-nav {
+      position: absolute;
+      top: 50%; left: 40px;
+      margin-top: -45px;
+      width: 40px; height: 90px;
+
+      a {
+        display: block;
+        width: 40px; height: 40px;
+        border: solid 1px #666;
+        color: #666;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transition: all 0.35s ease 0s;
+        opacity: 0;
+      }
+      a:first-child { margin-bottom: 10px; }
+      a:hover {
+        background-color: #666;
+        color: #eee;
       }
     }
   }
