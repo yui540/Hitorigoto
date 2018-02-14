@@ -205,7 +205,8 @@
         position: relative;
         width: 100%; height: 50px;
         display: block;
-        opacity: 0;
+
+        section { opacity: 0; }
 
         .triangle {
           position: absolute;
@@ -224,9 +225,7 @@
           line-height: 50px;
         }
 
-        &::before {
-          content: "";
-          display: block;
+        .label {
           position: absolute;
           bottom: 5px; left: 0;
           width: 180px; height: 15px;
@@ -332,10 +331,10 @@
      * global-nav
      */
     .global-nav {
-      .nav-li:nth-child(1) { animation: fadein 0.7s ease 6s forwards; }
-      .nav-li:nth-child(2) { animation: fadein 0.7s ease 6.1s forwards; }
-      .nav-li:nth-child(3) { animation: fadein 0.7s ease 6.2s forwards; }
-      .nav-li:nth-child(4) { animation: fadein 0.7s ease 6.3s forwards; }
+      .nav-li:nth-child(1) section { animation: fadein 0.7s ease 6s forwards; }
+      .nav-li:nth-child(2) section { animation: fadein 0.7s ease 6.1s forwards; }
+      .nav-li:nth-child(3) section { animation: fadein 0.7s ease 6.2s forwards; }
+      .nav-li:nth-child(4) section { animation: fadein 0.7s ease 6.3s forwards; }
     }
     
     /**
