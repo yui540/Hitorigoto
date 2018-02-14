@@ -8,6 +8,7 @@ console.log('###############################################')
 console.log('Designed by yuki540.')
 
 util.setMainIllustSize()
+util.setNavEffect()
 util.preload(preload_json, () => {
   util.finLoadView()  
 }, data => {

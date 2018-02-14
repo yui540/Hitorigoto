@@ -118,9 +118,28 @@ export const setMainIllustSize = () => {
   let height = 0
   if(isPC()) height = window.innerHeight >= 650 ? window.innerHeight : 650
   else       height = screen.height
-  const child = document.querySelectorAll('.main-illust div section')
+  const illusts = document.querySelectorAll('.main-illust .illust .image')
   
-  child.forEach((node) => {
+  illusts.forEach(node => {
     node.style.height = `${ height }px`
+  })
+}
+
+/**
+ * global-navのエフェクト設定
+ */
+export const setNavEffect = () => {
+  const nav_li = document.querySelectorAll('.nav-li')
+  const nav_effect = document.querySelectorAll('.nav-effect section')
+  nav_li.forEach((node, i) => {
+    node.number = i
+    
+    node.addEventListener('mouseover', e => {
+      nav_effect[node.number].setAttribute('data-hover', 'true')
+    })
+
+    node.addEventListener('mouseout', e => {
+      nav_effect[node.number].setAttribute('data-hover', 'false')
+    })
   })
 }
