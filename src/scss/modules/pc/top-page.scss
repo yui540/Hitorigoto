@@ -286,7 +286,7 @@
       }
       .nav-li:hover {
         animation: top-page__hover-global-nav 0.6s ease-out 0s forwards;
-        &::before { height: 40px; }
+        .label { height: 40px; }
       }
     }
 
