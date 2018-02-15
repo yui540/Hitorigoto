@@ -173,7 +173,9 @@
         top: 20px; left: 20px;
         width: calc(100% - 40px); height: calc(100% - 40px);
         border: solid 3px #777;
+        border-radius: 3px;
         box-sizing: border-box;
+        overflow: hidden;
         opacity: 0;
 
         div {
