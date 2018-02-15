@@ -117,7 +117,7 @@ export const startTopPage = () => {
 export const setMainIllustSize = () => {
   let height = 0
   if(isPC()) height = window.innerHeight >= 650 ? window.innerHeight : 650
-  else       height = screen.height
+  else       height = document.getElementById('top-page').clientHeight
   const illusts = document.querySelectorAll('.main-illust .illust .image')
   
   illusts.forEach(node => {
@@ -142,4 +142,23 @@ export const setNavEffect = () => {
       nav_effect[node.number].setAttribute('data-hover', 'false')
     })
   })
+}
+
+/**
+ * sp-menuのクリック処理
+ */
+export const bindSpMenu = () => {
+  const sp_menu = document.querySelector('.sp-menu')
+  const global_nav = document.querySelector('.global-nav')
+
+  sp_menu.addEventListener('click', e => {
+    const state = sp_menu.getAttribute('data-state')
+    if(state === 'true') {
+      sp_menu.setAttribute('data-state', '')
+      global_nav.setAttribute('data-state', '')
+    } else {
+      sp_menu.setAttribute('data-state', 'true')
+      global_nav.setAttribute('data-state', 'true')
+    }
+  }, false)
 }
