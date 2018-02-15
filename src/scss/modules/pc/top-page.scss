@@ -118,7 +118,7 @@
         position: absolute;
         top: 20px; left: 20px;
         width: calc(100% - 40px); height: calc(100% - 40px);
-        border: solid 1px #666;
+        border: solid 3px #777;
         box-sizing: border-box;
         opacity: 0;
 
@@ -131,7 +131,7 @@
             content: "";
             display: block;
             position: absolute;
-            background-color: #666;
+            background-color: #777;
           }
           &::before { width: 40px; height: 20px; }
           &::after  { width: 20px; height: 40px; }
