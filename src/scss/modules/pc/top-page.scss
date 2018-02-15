@@ -303,20 +303,19 @@
         display: block;
         width: 40px; height: 40px;
         border: solid 1px #666;
-        color: #666;
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
         border-radius: 50%;
         box-sizing: border-box;
         transition: all 0.35s ease 0s;
         opacity: 0;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       a:first-child { margin-bottom: 10px; }
-      a:hover {
-        background-color: #666;
-        color: #eee;
-      }
+      a:hover { transform: scale(1.2); }
+
+      .twitter { background-image: url(../images/top-page/sns/twitter.png); }
+      .github  { background-image: url(../images/top-page/sns/github.png); }
     }
   }
 
