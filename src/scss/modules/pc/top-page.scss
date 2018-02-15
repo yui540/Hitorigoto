@@ -337,7 +337,7 @@
       .illust:nth-child(1) { animation: top-page__show-main-illust 0.7s ease 4.4s forwards; }
       .illust:nth-child(2) { animation: top-page__show-main-illust 0.7s ease 4.8s forwards; }
       .illust:nth-child(3) { animation: top-page__show-main-illust 0.7s ease 5.2s forwards; }
-      .illust { .frame { animation: fadein 0.7s ease 6s forwards; } }
+      .illust { .frame { animation: top-page__show-frame 1s ease 6s forwards; } }
     }
     
     /**
@@ -376,18 +376,18 @@
      * global-nav
      */
     .global-nav {
-      .nav-li:nth-child(1) section { animation: fadein 0.7s ease 6s forwards; }
-      .nav-li:nth-child(2) section { animation: fadein 0.7s ease 6.1s forwards; }
-      .nav-li:nth-child(3) section { animation: fadein 0.7s ease 6.2s forwards; }
-      .nav-li:nth-child(4) section { animation: fadein 0.7s ease 6.3s forwards; }
+      .nav-li:nth-child(1) section { animation: fadein 1s ease 6.5s forwards; }
+      .nav-li:nth-child(2) section { animation: fadein 1s ease 6.6s forwards; }
+      .nav-li:nth-child(3) section { animation: fadein 1s ease 6.7s forwards; }
+      .nav-li:nth-child(4) section { animation: fadein 1s ease 6.8s forwards; }
     }
     
     /**
      * sns-nav
      */
     .sns-nav {
-      a:nth-child(1) { animation: fadein 0.7s ease 6.4s forwards; }
-      a:nth-child(2) { animation: fadein 0.7s ease 6.5s forwards; }
+      a:nth-child(1) { animation: fadein 1s ease 6.9s forwards; }
+      a:nth-child(2) { animation: fadein 1s ease 7.0s forwards; }
     }
   }
 }
