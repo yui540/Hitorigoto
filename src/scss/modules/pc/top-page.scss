@@ -373,6 +373,11 @@
       .twitter { background-image: url(../images/top-page/sns/twitter.png); }
       .github  { background-image: url(../images/top-page/sns/github.png); }
     }
+
+    /**
+     * sp-menu
+     */
+    .sp-menu { display: none; }
   }
 
   #top-page[data-state="start"] {
