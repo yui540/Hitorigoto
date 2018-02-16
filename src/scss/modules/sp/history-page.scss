@@ -1,0 +1,68 @@
+@include sp-layout {
+  .history-page {
+    
+    .history-box {
+
+      .history-li {
+        position: relative;
+        width: 90%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: solid 1px #4c4c4c;
+        margin: 20px auto;
+        border-radius: 3px;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 15px; height: 15px;
+          background-color: #4c4c4c;
+        }
+        &::before { top: 0; right: 0; border-bottom-left-radius: 3px; }
+        &::after  { bottom: 0; left: 0; border-top-right-radius: 3px; }
+        
+        .tag {
+          font-size: 14px;
+          color: #4c4c4c;
+
+          span { margin-right: 5px; }
+        }
+
+        .title {
+          font-size: 20px;
+          color: #4c4c4c;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        img {
+          width: 100%;
+          display: block;
+          border-radius: 3px;
+        }
+
+        a {
+          display: block;
+          transition: all 0.35s ease 0s;
+          font-size: 14px;
+          line-height: 40px;
+          text-align: center;
+          color: #4c4c4c;
+          width: 150px; height: 40px;
+          border-radius: 3px;
+          border: solid 1px #4c4c4c;
+          margin: 0 auto;
+          margin-top: 10px;
+        }
+        a:hover {
+          background-color: #4c4c4c;
+          color: #eee;
+        }
+      }
+    }
+  }
+}

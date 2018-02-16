@@ -1,0 +1,49 @@
+@include sp-layout {
+  .memories-page {
+    
+    .memories-box {
+
+      .memories-li {
+        position: relative;
+        width: 90%;
+        background-color: #333;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        transition: all 0.35s ease 0s;
+        display: block;
+        padding-top: 10px;
+
+        img {
+          display: block;
+          margin: 0px auto;
+          margin-bottom: 10px;
+          width: 90%;
+        }
+
+        h4 {
+          font-size: 16px;
+          color: #ccc;
+          padding: 5px 10px;
+          box-sizing: border-box;
+        }
+
+        small {
+          display: block;
+          color: #999;
+          font-size: 12px;
+          text-align: right;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+      }
+      .memories-li:hover { box-shadow: 0 0 20px #4c4c4c; }
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
