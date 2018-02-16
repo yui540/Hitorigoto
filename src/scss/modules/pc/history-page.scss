@@ -1,0 +1,74 @@
+@include pc-layout {
+  .history-page {
+    
+    .history-box {
+      width: 450px;
+      margin: 0 auto;
+
+      .history-li {
+        position: relative;
+        width: 450px; height: 380px;
+        box-sizing: border-box;
+        border: solid 1px #4c4c4c;
+        margin: 20px;
+        border-radius: 3px;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 15px; height: 15px;
+          background-color: #4c4c4c;
+        }
+        &::before { top: 0; right: 0; border-bottom-left-radius: 3px; }
+        &::after  { bottom: 0; left: 0; border-top-right-radius: 3px; }
+        
+        .tag {
+          position: absolute;
+          top: 5px; left: 5px;
+          font-size: 16px;
+          color: #4c4c4c;
+
+          span { margin-right: 5px; }
+        }
+
+        .title {
+          font-size: 24px;
+          color: #4c4c4c;
+          text-align: center;
+          width: 100%;
+          position: absolute;
+          top: 20px; left: 0;
+        }
+
+        img {
+          width: 400px;
+          display: block;
+          position: absolute;
+          top: 65px; left: 25px;
+          border-radius: 3px;
+        }
+
+        a {
+          display: block;
+          transition: all 0.35s ease 0s;
+          position: absolute;
+          font-size: 14px;
+          line-height: 40px;
+          text-align: center;
+          color: #4c4c4c;
+          bottom: 15px; left: 150px;
+          width: 150px; height: 40px;
+          border-radius: 3px;
+          border: solid 1px #4c4c4c;
+        }
+        a:hover {
+          background-color: #4c4c4c;
+          color: #eee;
+        }
+      }
+    }
+  }
+}
