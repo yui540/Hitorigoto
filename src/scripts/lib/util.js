@@ -3,6 +3,7 @@ const progress_bar = document.querySelector('.load-progressbar-mainline')
 const eriri_animation = document.getElementById('eriri-animation')
 const title_animation = document.getElementById('title-animation')
 const top_page = document.getElementById('top-page')
+const pages = document.querySelector('#pages')
 
 /**
  * 画像のプリロード
@@ -161,4 +162,74 @@ export const bindSpMenu = () => {
       global_nav.setAttribute('data-state', 'true')
     }
   }, false)
+}
+
+/**
+ * global-navのルーティングをバインド
+ */
+export const bindRouting = () => {
+  const global_nav = document.querySelectorAll('.global-nav .nav-li')
+
+  global_nav.forEach(nav_li => {
+    nav_li.addEventListener('click', e => {
+      e.preventDefault()
+      const route = nav_li.href.match(/#(.+?)$/)[1]
+      showPage(route)
+    }, false)
+  })
+}
+
+/**
+ * 閉じるボタンのバインド
+ */
+export const bindCloseBtn = () => {
+  const close_btn = document.querySelector('.close-btn')
+  close_btn.addEventListener('click', e => {
+    hiddenPage()
+  }, false)
+}
+
+/**
+ * ページの表示
+ * @param route : パス名
+ */
+export const showPage = route => {
+  pages.style.display = 'block'
+  pages.setAttribute('data-state', 'true')
+  showTargetPage(route)
+}
+
+/**
+ * ページの非表示
+ */
+export const hiddenPage = () => {
+  pages.setAttribute('data-state', 'false')
+  hiddenAllPage()
+  setTimeout(() => {
+    pages.style.display = 'none'
+  }, 500)
+}
+
+/**
+ * ターゲットのページを表示
+ * @param route : パス名
+ */
+export const showTargetPage = route => {
+  const target_page = document.querySelector(`.${ route }-page`)
+  target_page.style.display = 'block'
+}
+
+/**
+ * 各ページを非表示
+ */
+export const hiddenAllPage = () => {
+  const profile_page = document.querySelector('.profile-page')
+  const history_page = document.querySelector('.history-page')
+  const product_page = document.querySelector('.product-page')
+  const memories_page = document.querySelector('.memories-page')
+
+  profile_page.style.display = 'none'
+  history_page.style.display = 'none'
+  product_page.style.display = 'none'
+  memories_page.style.display = 'none'
 }
