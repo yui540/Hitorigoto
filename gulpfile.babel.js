@@ -34,6 +34,7 @@ gulp.task('default', ['js', 'css'])
 gulp.task('watch', () => {
   gulp.watch([
     `${ SRC }/**/*.js`,
+    `${ SRC }/**/*.jsx`,
     `${ SRC }/**/*.json`,
     `${ SRC }/**/*.scss`
   ], ['js', 'css'])
