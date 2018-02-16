@@ -67,6 +67,8 @@
         overflow: auto;
 
         .page {
+          display: none;
+
           .page-title {
             position: relative;
             width: 600px; height: 50px;
