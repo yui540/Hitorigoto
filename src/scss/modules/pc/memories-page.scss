@@ -1,0 +1,48 @@
+@include pc-layout {
+  .memories-page {
+    
+    .memories-box {
+      width: 710px;
+      margin: 0 auto;
+
+      .memories-li {
+        position: relative;
+        float: left;
+        width: 340px; height: 280px;
+        background-color: #333;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        transition: all 0.35s ease 0s;
+
+        img {
+          display: block;
+          margin: 10px;
+          width: 320px;
+        }
+
+        h4 {
+          font-size: 16px;
+          color: #ccc;
+          padding: 5px 10px;
+          box-sizing: border-box;
+        }
+
+        small {
+          position: absolute;
+          bottom: 10px; right: 10px;
+          color: #999;
+          font-size: 12px;
+        }
+      }
+      .memories-li:nth-child(2n) { margin-right: 0; }
+      .memories-li:hover { box-shadow: 0 0 20px #4c4c4c; }
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
