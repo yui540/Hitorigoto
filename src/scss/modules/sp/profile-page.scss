@@ -1,0 +1,72 @@
+@include sp-layout {
+  .profile-page {
+
+    /**
+     * box
+     */
+    .box {
+      margin-top: 60px;
+
+      /*** left ***/
+      .left {
+        width: 200px; height: auto;
+        margin: 0 auto;
+
+        .icon {
+          position: relative;
+          margin: 50px auto;
+          width: 100px; height: 100px;
+          background-color: #fff;
+          border-radius: 50%;
+
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+          }
+          &::before { top: -7px; left: -7px; }
+          &::after  { bottom: -7px; right: -7px; }
+
+          div {
+            position: absolute;
+            top: 10px; left: 10px;
+            width: 80px; height: 80px;
+            background-image: url(../images/profile/yuki540.png);
+            background-size: 100%;
+            border-radius: 50%;
+            z-index: 1;
+          }
+        }
+      }
+
+      /*** right ***/
+      .right {
+        margin: 0 auto;
+        padding: 0 30px;
+        box-sizing: border-box;
+
+        h3 {
+          font-size: 20px;
+          padding: 2px 20px;
+          border-left: solid 10px #aaa;
+          margin-bottom: 35px;
+        }
+        
+        p {
+          font-size: 13px;
+          margin-top: 20px;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
