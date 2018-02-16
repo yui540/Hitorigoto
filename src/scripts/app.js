@@ -10,6 +10,9 @@ console.log('Designed by yuki540.')
 util.setMainIllustSize()
 util.setNavEffect()
 util.bindSpMenu()
+util.bindCloseBtn()
+util.bindRouting()
+
 util.preload(preload_json, () => {
   util.finLoadView()  
 }, data => {
