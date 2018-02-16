@@ -68,4 +68,22 @@
       }
     }
   }
+  
+  #pages[data-state="true"] {
+    animation: pages__open 0.55s ease 0s forwards;
+
+    /**
+     * close-btn
+     */
+    .close-btn { animation: pages__show-close-btn 0.5s ease 1s forwards; }
+
+    /**
+     * wrap
+     */
+    .wrap { animation: pages__show-wrap 0.7s ease 0.5s forwards; }
+  }
+
+  #pages[data-state="false"] {
+    animation: pages__close 0.55s ease 0s forwards;
+  }
 }

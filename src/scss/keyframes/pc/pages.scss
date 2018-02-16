@@ -1,0 +1,26 @@
+@keyframes pages__open {
+  0% {
+    transform: translateY(-100%); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+  }
+  100% {
+    transform: translateY(0%); border-bottom-left-radius: 0; border-bottom-right-radius: 0;
+  }
+}
+@keyframes pages__close {
+  0% {
+    transform: translateY(0%); border-bottom-left-radius: 0; border-bottom-right-radius: 0;
+  }
+  100% {
+    transform: translateY(-100%); border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+  }
+}
+
+@keyframes pages__show-close-btn {
+  0%   { right: -40px; top: -40px; opacity: 0; }
+  100% { right: -10px; top: -10px; opacity: 1; }
+}
+
+@keyframes pages__show-wrap {
+  0%   { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
