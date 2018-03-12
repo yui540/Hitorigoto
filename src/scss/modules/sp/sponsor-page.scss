@@ -1,0 +1,34 @@
+@include sp-layout {
+  .sponsor-page {
+    width: 90%;
+    margin: 0 auto;
+
+    .sponsor-li {
+      margin: 0 auto;
+      margin-bottom: 15px;
+      width: 190px; height: 160px;
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 0 10px #ccc;
+
+      .icon {
+        margin: 10px auto;
+        width: 90px; height: 90px;
+        border-radius: 50%;
+        display: block;
+        border: solid 5px #fff;
+        box-shadow: 0 0 10px #aaa;
+      }
+      .name {
+        font-size: 14px;
+        color: #444;
+        text-align: center;
+        margin-top: 5px;
+
+        span { display: inline-block; }
+        span:nth-child(1) { color: $theme-red; margin-right: 5px; }
+      }
+    }
+  }
+}
