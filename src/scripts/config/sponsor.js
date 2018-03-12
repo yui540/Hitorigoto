@@ -26,7 +26,7 @@ export default [
   { id: 'henbit', name: 'henbit', moneny: 300 },
   { id: 'sengokuku', name: 'sengokukun', moneny: 300 },
   { id: 'tsunet111', name: '支倉常明', moneny: 300 },
-  { id: 'Elnyan', name: 'えるにゃん', moneny: 300 },
+  { id: 'ELnyan', name: 'えるにゃん', moneny: 300 },
   { id: 'soichironitta', name: 'soichironitta', moneny: 300 },
   { id: 'sho0608', name: '渡辺めたる', moneny: 300 },
   { id: 'chocomelon', name: 'chocomelon', moneny: 600 },
