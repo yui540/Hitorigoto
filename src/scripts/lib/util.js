@@ -227,6 +227,7 @@ export const hiddenAllPage = () => {
   const history_page = document.querySelector('.history-page')
   const product_page = document.querySelector('.product-page')
   const memories_page = document.querySelector('.memories-page')
+  const sponsor_page = document.querySelector('.sponsor-page')
 
   profile_page.style.display = 'none'
   history_page.style.display = 'none'
