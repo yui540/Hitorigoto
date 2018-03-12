@@ -128,8 +128,8 @@
       .nav-effect {
         position: absolute;
         top: 50%; right: 260px;
-        margin-top: -100px;
-        width: 600px; height: 200px;
+        margin-top: -125px;
+        width: 600px; height: 250px;
 
         section {
           position: relative;
@@ -299,8 +299,8 @@
     .global-nav {
       position: absolute;
       top: 50%; right: 20px;
-      margin-top: -100px;
-      width: 200px; height: 200px;
+      margin-top: -125px;
+      width: 200px; height: 250px;
 
       .nav-li {
         position: relative;
@@ -444,14 +444,15 @@
       .nav-li:nth-child(2) section { animation: fadein 1s ease 6.6s forwards; }
       .nav-li:nth-child(3) section { animation: fadein 1s ease 6.7s forwards; }
       .nav-li:nth-child(4) section { animation: fadein 1s ease 6.8s forwards; }
+      .nav-li:nth-child(5) section { animation: fadein 1s ease 7.0s forwards; }
     }
     
     /**
      * sns-nav
      */
     .sns-nav {
-      a:nth-child(1) { animation: fadein 1s ease 6.9s forwards; }
-      a:nth-child(2) { animation: fadein 1s ease 7.0s forwards; }
+      a:nth-child(1) { animation: fadein 1s ease 7.1s forwards; }
+      a:nth-child(2) { animation: fadein 1s ease 7.2s forwards; }
     }
   }
 }

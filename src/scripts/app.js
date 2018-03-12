@@ -5,11 +5,18 @@ import preload_json from './config/preload'
 import history_json from './config/history'
 import product_json from './config/product'
 import memories_json from './config/memories'
+import sponsor_json from './config/sponsor'
+sponsor_json.sort((a, b) => {
+  if(a.moneny < b.moneny) return 1
+  if(a.moneny > b.moneny) return -1
+  return 0
+})
 
 // components
 import HistoryBox from './components/history-box.jsx'
 import ProductBox from './components/product-box.jsx'
 import MemoriesBox from './components/memories-box.jsx'
+import SponsorBox from './components/sponsor-box.jsx'
 
 console.log('###############################################')
 console.log('                 ヒトリゴト')
@@ -30,6 +37,11 @@ render(
 render(
   <MemoriesBox json={ memories_json } />,
   document.getElementById('memories-box')
+)
+
+render(
+  <SponsorBox json={ sponsor_json } />,
+  document.getElementById('sponsor-box')
 )
 
 // bind event
