@@ -233,4 +233,5 @@ export const hiddenAllPage = () => {
   history_page.style.display = 'none'
   product_page.style.display = 'none'
   memories_page.style.display = 'none'
+  sponsor_page.style.display = 'none'
 }
