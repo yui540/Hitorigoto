@@ -68,6 +68,13 @@ export default {
   ],
   "design": [
     {
+      "name": "ChocolateCake",
+      "link": "https://chocolate-cake.yuki540.com/",
+      "thumb": "./images/product/chocolate-cake.png",
+      "description": "僕が作ったCSS Animation作品をまとめたサイト",
+      "date": "2018/03/22"
+    },
+    {
       "name": "三玖",
       "link": "http://miku.yuki540.com",
       "thumb": "./images/product/miku.png",
