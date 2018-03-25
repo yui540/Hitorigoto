@@ -34,13 +34,6 @@ export default {
       "thumb": "./images/product/ontama.png",
       "description": "声優ラジオ音泉をダウンロードするAndroidアプリ",
       "date": "2017/04/15"
-    },
-    {
-      "name": "音泉ダウンローダー",
-      "link": "https://github.com/yuki540net/onsen-downloader",
-      "thumb": "./images/product/onsen-downloader.png",
-      "description": "声優ラジオ音泉をダウンロードするChrome拡張",
-      "date": "2017/02/25"
     }
   ],
   "lib": [
@@ -73,13 +66,6 @@ export default {
       "thumb": "./images/product/chocolate-cake.png",
       "description": "僕が作ったCSS Animation作品をまとめたサイト",
       "date": "2018/03/22"
-    },
-    {
-      "name": "三玖",
-      "link": "http://miku.yuki540.com",
-      "thumb": "./images/product/miku.png",
-      "description": "『中野三玖は、可愛い』",
-      "date": "2018/01/11"
     },
     {
       "name": "俺ガイル非公式サイト",
