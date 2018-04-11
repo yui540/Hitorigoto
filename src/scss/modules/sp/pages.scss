@@ -64,6 +64,7 @@
         background-color: #eee;
         box-shadow: 0 0 20px #bbb inset;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
 
         .page {
           display: none;
