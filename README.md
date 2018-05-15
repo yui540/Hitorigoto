@@ -3,7 +3,7 @@ magical-girl.site version5.0.0のテーマは、「ヒトリゴト」です。
 
 僕の推しキャラ（2018/02/08時点）である澤村・スペンサー・英梨々をイメージしたデザインに仕上げています。
 
-[https://yuki540.com](https://yuki540.com)
+[https://v5.magical-girl.site/](https://v5.magical-girl.site)
 
 ![sitename](./screenshots/screenshots.png)
 
